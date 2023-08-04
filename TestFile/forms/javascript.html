@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <script>
+      let querystring = window.location.search;
+      let urlparam = new URLSearchParams(querystring);
+      let textbox1 = urlparam.get("fname");
+      let textbox2 = urlparam.get("lname");
+      let textbox3 = urlparam.get("gender");
+      let textbox4 = urlparam.get("Country");
+      let textbox5 = urlparam.get("state");
+      let textbox6 = urlparam.get("district");
+      let textbox7 = urlparam.get("a");
+      let textbox8 = urlparam.get("b");
+      let textbox9 = urlparam.get("c");
+
+      // let textbox4 = urlparam.get('Country');
+      // let textbox4 = urlparam.get('Country');
+
+      let zaid = document.getElementsByTagName("p")[0];
+      zaid.innerHTML = `The first name is ${textbox1}`;
+      let abc = document.getElementsByTagName("p")[1];
+      abc.innerHTML = `The first name is ${textbox2}`;
+      let xyz = document.getElementsByTagName("p")[2];
+      xyz.innerHTML = `The first name is ${textbox3}`;
+      let zub = document.getElementsByTagName("p")[3];
+      zub.innerHTML = `The first name is ${textbox4}`;
+      let zah = document.getElementsByTagName("p")[4];
+      zah.innerHTML = `The first name is ${textbox5}`;
+      let kaf = document.getElementsByTagName("p")[5];
+      kaf.innerHTML = `The first name is ${textbox6}`;
+      let kah = document.getElementsByTagName("p")[6];
+      kah.innerHTML = `The first name is ${textbox7}`;
+      let ka = document.getElementsByTagName("p")[7];
+      ka.innerHTML = `The first name is ${textbox8}`;
+      let af = document.getElementsByTagName("p")[8];
+      af.innerHTML = `The first name is ${textbox9}`;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,871 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Online Application - Home</title>
+<link href="/sbijava/oaonri/css/stylesheet_nri.css" rel="stylesheet" type="text/css" />
+<link type="text/css" rel="stylesheet" href="/sbijava/oaonri/css/calander.css" />
+<script type='text/javascript' src='dwr/interface/onlineAccOpenUtils.js'></script>
+<script type='text/javascript' src='dwr/engine.js'></script>
+<script type='text/javascript' src='dwr/util.js'></script>
+
+<script language="JavaScript">
+window.history.forward(0);
+</script>
+
+<!--<script type="text/javascript" src="/sbijava/oaonri/js/jquery-1.7.2.min.js"></script>-->
+<script type="text/javascript"	src="/sbijava/oaonri/js/jquery-3.6.0.min.js"></script>
+<script type="text/javascript"	src="/sbijava/oaonri/js/jquery-ui-1.12.1.min.js"></script>
+<!--<script type="text/javascript" src="/sbijava/oaonri/js/jquery-ui-1.8.20.custom.min.js"></script>-->
+
+<script type="text/javascript" src="/sbijava/oaonri/js/calander.js"></script>
+<script type="text/javascript" src="/sbijava/oaonri/js/nri.js"></script>
+<script type="text/javascript" src="/sbijava/oaonri/js/onlineaccopen.js"></script>
+<script type="text/javascript" src="/sbijava/oaonri/js/onlineoaonriais.js"></script>
+<script type="text/javascript" src="/sbijava/oaonri/js/onlineoaonricis.js"></script>
+
+<style>
+
+.container{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  opacity: 0.9;
+  background: #22222294;
+  z-index: 40000;
+  top:0;
+  left: 0;
+  overflow: hidden;
+
+  animation-name: fadeIn_Container;
+  animation-duration: 1s;
+  
+  
+}
+
+.modal{
+  display:none;
+  top: 0;
+  min-width: 250px;
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 40001;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #000;
+  margin-top: 10px;
+  margin-left: 10%;
+
+  animation-name: fadeIn_Modal;
+  animation-duration: 0.8s;
+ 
+}
+
+.header{
+  width: 100%;
+  height: 40px;
+
+}
+.content{
+  width: 100%;
+  height: 200px;
+}
+
+.modal h4 {
+    color: #1867c5;
+}
+
+/****MEDIA QUERIES****/
+
+@media screen and (min-width: 600px){
+
+  .modal{
+    width: 555px;
+    height: 365px;
+    margin-left: calc(45vw - 250px);
+    margin-top: calc(30vh - 150px);
+
+  }
+
+
+  .header{
+    width: 100%;
+    height: 60px;
+  }
+
+ 
+  .content{
+    width: 100%;
+    height: 190px;
+	margin-top:5px !important;
+  }
+}
+
+/*LARGE SCREEN*/
+@media screen and (min-width: 1300px){
+
+}
+
+/****ANIMATIONS****/
+
+@keyframes fadeIn_Modal {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn_Container {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 0.9;
+  }
+}
+
+
+/* NRE/NRO Modal */	
+
+#nrenroModal .download_btn .btn {
+    color: #fff;
+    padding: 3px 10px;
+}
+#nrenroModal .download_btn .btn-default {
+    background: #f89611 none repeat scroll 0 0;
+    border: 0 none;
+    font-weight: bold;
+}
+#nrenroModal .continuebtn{
+	background: #005c8b;
+	color: #fff;
+	cursor: pointer;
+}
+#nrenroModal .agreemargin{
+	margin-top:10px;
+	margin-left:15px;
+	font-family:arial ;
+	font-size : 12px ;
+	font-style: normal;
+}
+#nrenroModal .yesNoMain{
+	margin-top:20px;
+	margin-left:15px;
+	font-family:arial;
+	font-size : 12px;
+}
+#nrenroModal .buttongroup{
+	text-align:center;
+}
+#nrenroModal .radioLabel{
+	margin-left: 6px;
+	color:#bd3b3b;
+	font-weight:bold;
+	cursor:pointer;
+}
+.redalert{
+	color:red;
+}
+#nrenroModal .btn{
+display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+#nrenroModalacc .download_btn .btn {
+    color: #fff;
+    padding: 3px 10px;
+}
+#nrenroModalacc .download_btn .btn-default {
+    background: #f89611 none repeat scroll 0 0;
+    border: 0 none;
+    font-weight: bold;
+}
+#nrenroModalacc .continuebtn{
+	background: #005c8b;
+	color: #fff;
+	cursor: pointer;
+}
+#nrenroModalacc .agreemargin{
+	margin-top:10px;
+	margin-left:15px;
+	font-family:arial;
+	font-size : 12px;
+	font-style: normal;
+	
+}
+#nrenroModalacc .yesNoMain{
+	margin-top:20px;
+	margin-left:15px;
+	font-family:arial ;
+	font-size : 12px ;
+	
+}
+#nrenroModalacc .buttongroup{
+	text-align:center;
+}
+#nrenroModalacc .radioLabel{
+	margin-left: 6px;
+	color:#bd3b3b;
+	font-weight:bold;
+	cursor:pointer;
+}
+.redalert{
+	color:red;
+}
+#nrenroModalacc .btn{
+display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+	border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+}
+	
+	
+/* NRE/NRO Modal */					 
+
+</style>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#cont_cust").click(function(){
+		$(".downCont_custom").slideToggle("slow");
+	});
+	$("#cont_acct").click(function(){
+		$(".downCont_acct").slideToggle("slow");
+	});
+	$("#close_cust").click(function(){
+		$(".downCont_custom").slideToggle("slow");
+	});
+	$("#close_acct").click(function(){
+		$(".downCont_acct").slideToggle("slow");
+	});
+});
+
+</script>
+</head>
+<body>
+<div id="headerWrapper">
+<div class="headerMain">
+  <div class="header">
+    <div class="logo"> <img alt="SBI" title="SBI" src="/sbijava/oaonri/images/sbi_logo.gif" /> </div>
+    <div class="topRight">
+		<div class="homeIcon"><a class="home" href="./onlineaccapp.htm"><img src="/sbijava/oaonri/images/icon_home.jpg" />Home</a></div>
+      <ul class="social">
+        <li><a id="facebook" href="https://www.facebook.com/StateBankofIndia" target="_blank" title="SBI Facebook Page https://www.facebook.com/StateBankofIndia">Facebook</a></li>
+        <li><a id="twitter" href="https://twitter.com/TheOfficialSBI" target="_blank" title="SBI Twitter Page https://twitter.com/TheOfficialSBI">Twitter</a></li>
+        <li><a id="youtube" href="http://www.youtube.com/theofficialsbi" target="_blank" title="SBI You Tube Page http://www.youtube.com/theofficialsbi">Youtube</a></li>
+      </ul>
+                <!-- added for Modifications in NRI Online Account Opening Form -->
+      <p class="feedback">For feedback, please mail us at: <a href="mailto:aof.gnc@sbi.co.in">aof.gnc@sbi.co.in</a></p>
+      <!-- added for Modifications in NRI Online Account Opening Form -->
+    </div>
+  </div>
+  </div>
+</div>
+<form name="onlineAccountOpeningLanding" id="onlineAccountOpeningLanding" autocomplete="off" method="post"> 
+<div class="bannerWrapper">
+  <div class="bannerMain">
+  	<div class="banner">
+  	  <div class="applyCont">
+		<div class="cusInfo">
+			<img src="/sbijava/oaonri/images/img_customerInfo.png" />
+				
+		  <div id="open"  onclick="openModal">
+			<p><a href="#">Start New</a></p></div>
+		    <p id="cont_cust"><a href="#">Continue with partially filled</a></p>
+		  </div>
+		<div class="downCont_custom">
+		<img id="close_cust" src="/sbijava/oaonri/images/btn_close.jpg" />
+		<ul class="innCont">
+			<li>
+				<label>Please enter your NCRN</label>
+				<input name="ncrn" id="ncrn" type="text" class="txt_box" size="15" maxlength="10" value="" onKeyup="javascript:this.value=this.value.toUpperCase();"/>
+			</li>
+			
+			<li>
+				<label>Please enter your<br />Date of Birth</label>
+				 
+				<input name="cisEditdob" type="text"  id="datepicker8" class="txt_box" size="15" value="" readonly="readonly" />			</li>
+				<li style="margin-bottom:10px;">
+				<label>&nbsp;</label>
+				<img id="captcha" src="./onlineAccOpencaptcha.htm" />
+		 	</li>
+			<li>
+				<label>Please enter the TEXT<br />as shown above</label>
+				<input name="captcha" id="captcha" type="text" class="txt_box" size="15" maxlength="10" onKeyup="javascript:this.value=this.value.toUpperCase();"/>
+			</li>
+			<li>
+				
+				<div id="btnDown"> <a href="#" onclick="javascript:cisEditLandingCheck()">&nbsp;Proceed</a></div>
+			</li>
+		</ul>
+	</div>
+		<div class="acctInfo">
+			
+			<img src="/sbijava/oaonri/images/img_acctInfo.png" />
+			<div id="openacc"  onclick="openModal">
+			<p><a href="#">Start New</a></p></div>
+			<p id="cont_acct"><a href="#">Continue with partially filled</a></p>
+		</div>
+		<div class="downCont_acct">
+		<img id="close_acct" src="/sbijava/oaonri/images/btn_close.jpg" />
+		<ul class="innCont">
+			<li>
+				<label>Please enter your NARN</label>
+				<input name="tarn" id="tarn" type="text" class="txt_box" size="15" maxlength="10" value="" onKeyup="javascript:this.value=this.value.toUpperCase();"/>
+			</li>
+			<li>
+				<label>Please enter your<br />Date of Birth</label>
+				  
+				<input name="aisEditdob" id="datepicker9" type="text" class="txt_box" size="15" maxlength="10" value="" readonly="readonly"/>			</li>
+			<li style="margin-bottom:10px;">
+				<label>&nbsp;</label>
+				<img id="captcha" src="./onlineAccOpencaptcha.htm" />
+		 	</li>
+			<li>
+				<label>Please enter the TEXT<br />as shown above</label>
+				<input name="captcha1" id="captcha1" type="text" class="txt_box" size="15" maxlength="10" onKeyup="javascript:this.value=this.value.toUpperCase();"/>
+			</li>
+			<li>
+				
+				<div id="btnDown"> <a href="#" onclick="javascript:aisEditLandingCheck();">&nbsp;Proceed</a></div>
+			</li>
+		</ul>
+	</div>
+	</div>
+   </div>
+  </div>
+</div>
+<input type="hidden" name="bankCode" id="bankCode" value="0"/>
+<input type="hidden" name="functionType" id="functionType"/>
+<input type="hidden" name="page" value="page1"/>
+<input type="hidden" name="pageType" value=""/>
+</form> 
+<div id="contWrapper">
+  <div class="contMain">
+    <div class="box_cont"> <a href="./onlineAccOpenNriChecklist.htm"><img src="/sbijava/oaonri/images/img_checklist.jpg" /><span>Checklist Of<br />
+      Documents<br />
+      Required</span></a> </div>
+    <div class="box_cont"> <a href="./onlineAccOpenNriProcedure.htm"><img src="/sbijava/oaonri/images/img_procedure.jpg" /><span>Procedure To<br />
+      Fill Online<br />
+      Application</span></a> </div>
+    <div class="box_cont"> <a href="./onlineAccOpenNriSteps.htm"><img src="/sbijava/oaonri/images/img_steps.jpg" /><span>Steps After <br />
+      Filling Online<br />
+      Application</span></a> </div>
+    <div class="box_cont" style="margin-right:0px;"> <a href="./onlineAccOpenNriFaq.htm"><img src="/sbijava/oaonri/images/img_faq.jpg" /><span>Frequently<br />
+      Asked<br />
+      Question</span></a> </div>
+  </div>
+</div>
+<div class="clear">&nbsp;</div>
+<div id="footerWrapper">
+  <div id="footerMain">
+    <p id="footCopy">&copy; State Bank of India. All Rights Reserved.</p>
+  </div>
+</div>
+<!-- Added for Enhancement of Online Account Opening -->
+<!-- Customer PopUp Modal -->
+<div class="container" id="container_a">
+  
+</div>
+
+<div class="modal" id="nrenroModal">
+  <div class="header">
+                
+         <button type="button" class="cancel" style="padding: 0;cursor: pointer;background: 0 0;border: 0;color: #2a2075;opacity: 1;float:right;margin-top:10px;margin-right:20px;">X</button>
+   
+       
+  </div>
+  <div class="content">
+  <div class="agreemargin">
+						<a href="" class="link_for_ie" rel="_blank" style="color: #337ab7" margin-top:30px;>
+						<b>Is your Country of Residence in European Union (EU)?</b>
+						</a> 
+					</div>
+					
+					<div class="yesNoMain">
+						<input type="radio" id="yes" name="residence" value="yes" ><label for="yes" class="radioLabel">Yes</label>
+						<input type="radio" id="no" name="residence" value="no" style="margin-left: 20px;"><label for="no" class="radioLabel">No</label>
+					</div>
+					
+					<div class="download_btn yesNoMain" >
+						<button class="btn btn-default" id="consetFormViewdownloadbtn"  name="Download" type="button" onclick="window.open('https://sbi.co.in/documents/21077/54394/02112021_Consent+Form+from+NRI+Customers+in+EU.pdf/674b9740-7da7-4a5d-509f-92d0fa407c53?t=1635854432041','_blank')" value="Redirect">View / Download Consent Form</button>
+						<button class="btn btn-default" id="consetFormViewdownloadbtnNeu"  name="Download" type="button" onclick="window.open('https://sbi.co.in/documents/21077/54394/02112021_Consent+Form+from+NRI+Customers+other+than+in+EU.pdf/916f1b60-677e-f708-fe63-9235be385e15?t=1635854453088','_blank')" value="Redirect">View / Download Consent Form</button>
+						<button class="btn btn-default" id="privacyNoticeViewdownloadbtn" name="Download" type="button" onclick="window.open('https://sbi.co.in/documents/21077/54394/02112021_Privacy+Notice+for+EU+Customers.pdf/e4e68a6e-d766-37e9-15e1-2e37ecc6f29e?t=1635854396089','_blank')" value="Redirect">View / Download Privacy Notice</button>
+					</div >
+ <br>
+  
+<p class="agreemargin">"Consent for Data Sharing and use of personal information for opening of NRE/NRO Savings / Current / Deposit Account with State Bank of India"</p>
+					
+<br>
+					<div class="agreemargin">
+						<input type="radio" id="agreecust" name="agree" value="agree" ><label for="agree" class="radioLabel" id="agreecustlbl">Agree</label>
+						<input type="radio" id="notagree" name="agree" value="notagree" style="margin-left: 20px;"><label for="notagree" class="radioLabel">Not Agree</label>
+					</div>
+				    <p id="viewdownloadbtn" class="agreemargin redalert"><em>Kindly download, sign and upload the duly signed consent form along with the KYC documents in the "Upload Application & Document for Preliminary Verification" link.</em></p>
+					<p id="mandatorymsg" class="agreemargin redalert"><em>Please note your Consent is mandatory for opening of NRI Account</em></p>
+					<div class="buttongroup agreemargin" id="agreecontinue">
+						<button onclick="javascript:cisLandingCheck();" class="btn btn-default continuebtn" id="continueBtnCus">CONTINUE</button>
+					</div>
+						                                                      
+	
+		<div class="buttongroup agreemargin" id="agreeclose">
+		 <button class="btn cancel continuebtn" name="CLOSE" type="button" value="CLOSE">CLOSE</button>
+	    </div>
+	
+  </div>
+ 
+   
+  
+</div>
+
+
+
+<div class="container" id="container_b">
+  
+</div>
+
+<div class="modal" id="nrenroModalacc">
+  <div class="header">
+      <button type="button" class="cancel" style="padding: 0;cursor: pointer;background: 0 0;border: 0;color: #2a2075;opacity: 1;float:right;margin-top:10px;margin-right:20px;">X</button>
+  </div>
+  <div class="content">
+  
+  <div class="agreemargin">
+						<a href="" class="link_for_ie" rel="_blank" style="color: #337ab7">
+						<b>Is your Country of Residence in European Union (EU)?</b>
+						</a> 
+					</div>
+					
+					<div class="yesNoMain">
+						<input type="radio" id="yesacc" name="residence" value="yes" ><label for="yes" class="radioLabel">Yes</label>
+						<input type="radio" id="noacc" name="residence" value="no" style="margin-left: 20px;"><label for="no" class="radioLabel">No</label>
+					</div>
+					
+					<div class="download_btn yesNoMain" >
+						<button class="btn btn-default" id="consetFormViewdownloadbtnacc"  name="Download" type="button" onclick="window.open('https://www.sbi.co.in/documents/21077/54394/02112021_Consent+Form+from+NRI+Customers+in+EU.pdf/674b9740-7da7-4a5d-509f-92d0fa407c53?t=1635854432041','_blank')" value="Redirect">View / Download Consent Form</button>
+						<button class="btn btn-default" id="consetFormViewdownloadbtnNeuacc"  name="Download" type="button" onclick="window.open('https://www.sbi.co.in/documents/21077/54394/02112021_Consent+Form+from+NRI+Customers+other+than+in+EU.pdf/916f1b60-677e-f708-fe63-9235be385e15?t=1635854453088','_blank')" value="Redirect">View / Download Consent Form</button>
+						<button class="btn btn-default" id="privacyNoticeViewdownloadbtnacc" name="Download" type="button" onclick="window.open('https://www.sbi.co.in/documents/21077/54394/02112021_Privacy+Notice+for+EU+Customers.pdf/e4e68a6e-d766-37e9-15e1-2e37ecc6f29e?t=1635854396089','_blank')" value="Redirect">View / Download Privacy Notice</button>
+					</div >
+ <br>
+  
+<p class="agreemargin">"Consent for Data Sharing and use of personal information for opening of NRE/NRO Savings / Current / Deposit Account with State Bank of India"</p>
+					<br>
+					<div class="agreemargin">
+						<input type="radio" id="agreeacc" name="agree" value="agree" ><label for="agree" class="radioLabel" id="agreeacclbl">Agree</label>
+						<input type="radio" id="notagreeacc" name="agree" value="notagree" style="margin-left: 20px;"><label for="notagree" class="radioLabel">Not Agree</label>
+					</div>
+				    <p  id="viewdownloadbtnacc" class="agreemargin redalert"><em>Kindly download, sign and upload the duly signed consent form along with the KYC documents in the "Upload Application & Document for Preliminary Verification" link.</em></p>
+					<p id="mandatorymsgacc" class="agreemargin redalert"><em>Please note your Consent is mandatory for opening of NRI Account</em></p>
+					<div class="buttongroup agreemargin" id="agreecontinueacc">
+						<button  onclick="javascript:aisLandingCheck();" class="btn btn-default continuebtn" id="continueBtnAcc">CONTINUE</button>
+					</div>
+
+	    <div class="buttongroup agreemargin" id="agreecloseacc">
+		 <button class="btn cancel continuebtn" name="CLOSE" type="button" value="CLOSE">CLOSE</button>
+	    </div>
+	
+  </div>
+ 
+   
+  
+</div>
+</body>
+
+<script type="text/javascript">
+	function cisLandingCheck() {
+		onlineAccOpenUtils.sessionValidation(cisLanding);
+	}	
+	function cisLanding(sessionStatus) {
+		var form = document.onlineAccountOpeningLanding;
+		form.functionType.value = '';
+		
+		if (sessionStatus == "failure") {
+			form.action= "onlineAccOpensessiontimeout.htm";
+		} else {
+			form.action= "onlineAccOpenCustomerInfoSection.htm";
+		}	
+	  
+		
+		form.submit();
+	}
+	
+	function aisLandingCheck() {
+		onlineAccOpenUtils.sessionValidation(aisLanding);
+	}	
+	function aisLanding(sessionStatus) {
+		var form = document.onlineAccountOpeningLanding;
+		
+		form.action= "onlineAccOpenAccountInfoSection.htm";
+		form.functionType.value = '';
+		
+		if (sessionStatus == "failure") {
+			form.action= "onlineAccOpensessiontimeout.htm";
+		}
+		
+		form.submit();
+	}
+	function cisEditLandingCheck() {
+		onlineAccOpenUtils.sessionValidation(cisEditLanding);	
+		
+	}	
+	function cisEditLanding(sessionStatus) {
+		if (sessionStatus == "failure") {
+			document.onlineAccountOpeningLanding.action= "onlineAccOpensessiontimeout.htm";
+			document.onlineAccountOpeningLanding.submit();
+		} else {		  
+			var form = document.onlineAccountOpeningLanding;
+			var ncrn = form.ncrn.value.trim(); 		
+			if (ncrn == "") {
+				alert("Please enter your NCRN");
+				form.ncrn.focus();	
+				return false;
+			} else if(!checkSpecial(ncrn)) {
+				alert("Special characters are not allowed");
+			    form.ncrn.focus();
+			    form.ncrn.select();
+			    return false;
+			}
+			var cisEditdob = form.cisEditdob.value.trim(); 		
+			if (cisEditdob == "") {
+				alert("Please enter your Date of Birth");
+				form.cisEditdob.focus();	
+				return false;
+			} else if(!checkSpecial(cisEditdob)) {
+				alert("Special characters are not allowed");
+			    form.cisEditdob.focus();
+			    form.cisEditdob.select();
+			    return false;
+			}
+			var captcha = form.captcha.value.trim();
+			if (captcha == "") {
+				alert("Please enter the string shown in the image");
+				form.captcha.focus();	
+				return false;
+			} else if(!checkSpecial(captcha)) {
+				alert("Special characters are not allowed");
+			    form.captcha.focus();
+			    form.captcha.select();
+			    return false;
+			}
+	
+			//cisEditDataCheck(ncrn, cisEditdob);
+			//added by sridhar
+			var form = document.onlineAccountOpeningLanding;
+			var captcha = form.captcha.value.trim();
+			onlineAccOpenUtils.captchaValidationCheckForCustomer(captcha,responseDataForFinal);
+		}
+	}
+	
+	
+	 function responseDataForFinal(status){
+			
+			var form = document.onlineAccountOpeningLanding;
+			var cisEditdob = form.cisEditdob.value.trim(); 		
+			var ncrn = form.ncrn.value.trim(); 		
+			if (status == "captchaFailure") {
+				alert("Please enter the string shown in the image");
+				form.captcha.focus();
+				form.captcha.select();
+				return false;
+			}
+				else if(status="success"){
+					cisEditDataCheck(ncrn, cisEditdob); 
+				}
+		}
+	 
+	 
+	function cisEditDataCheck(ncrn, cisEditdob) {
+		
+		onlineAccOpenUtils.onlineCustomerInfoSectionEditDataCheck(ncrn, cisEditdob ,cisEditResponseData);
+	}	
+	function cisEditResponseData(validationStatus) {
+		var form = document.onlineAccountOpeningLanding;
+		form.action= "onlineAccOpenCustomerInfoSection.htm";
+		form.functionType.value = 'cisEdit';
+		if (validationStatus == "success") {
+			form.submit();
+		} else if (validationStatus == "completed") {
+			alert('You have already submitted your Customer Information Form. Please note that no change can be made now.');
+		} else {
+			alert('The information entered does not match with our records. Please verify and try again.');
+		}
+	}	
+
+	
+	
+	function aisEditLandingCheck() {
+		onlineAccOpenUtils.sessionValidation(aisEditLanding);
+		
+	}	
+	function aisEditLanding(sessionStatus) {
+		if (sessionStatus == "failure") {
+			document.onlineAccountOpeningLanding.action= "onlineAccOpensessiontimeout.htm";
+			document.onlineAccountOpeningLanding.submit();
+		} else {		
+			var form = document.onlineAccountOpeningLanding;
+			var tarn = form.tarn.value.trim(); 		
+			if (tarn == "") {
+				alert("Please enter your NARN");
+				form.tarn.focus();	
+				return false;
+			} else if(!checkSpecial(tarn)) {
+				alert("Special characters are not allowed");
+			    form.tarn.focus();
+			    form.tarn.select();
+			    return false;
+			}
+			var aisEditdob = form.aisEditdob.value.trim(); 		
+			if (aisEditdob == "") {
+				alert("Please enter Sole/First Applicant's Date of Birth");
+				form.aisEditdob.focus();	
+				return false;
+			} else if(!checkSpecial(aisEditdob)) {
+				alert("Special characters are not allowed");
+			    form.aisEditdob.focus();
+			    form.aisEditdob.select();
+			    return false;
+			}
+			var captcha1 = form.captcha1.value.trim();
+			if (captcha1 == "") {
+				alert("Please enter the string shown in the image");
+				form.captcha1.focus();	
+				return false;
+			} else if(!checkSpecial(captcha1)) {
+				alert("Special characters are not allowed");
+			    form.captcha1.focus();
+			    form.captcha1.select();
+			    return false;
+			}
+	
+			//aisEditDataCheck(tarn, aisEditdob);
+			var form = document.onlineAccountOpeningLanding;
+			var captcha1 = form.captcha1.value.trim();
+			onlineAccOpenUtils.captchaValidationCheckForAccount(captcha1,responseDataForFinal1);
+		}
+	}
+	
+	function responseDataForFinal1(status){
+		
+		var form = document.onlineAccountOpeningLanding;
+		var aisEditdob = form.aisEditdob.value.trim(); 		
+		var tarn = form.tarn.value.trim(); 		
+		if (status == "captchaFailure") {
+			alert("Please enter the string shown in the image");
+			form.captcha1.focus();
+			form.captcha1.select();
+			return false;
+		}
+			else if(status="success"){
+				aisEditDataCheck(tarn, aisEditdob); 
+			}
+	}
+	
+	
+	function aisEditDataCheck(tarn, aisEditdob) {
+		onlineAccOpenUtils.onlineAccountInfoSectionEditDataCheck(tarn, aisEditdob , aisEditResponseData);
+	}	
+	function aisEditResponseData(validationStatus) {
+		var form = document.onlineAccountOpeningLanding;
+		form.action= "onlineAccOpenAccountInfoSection.htm";
+		form.functionType.value = 'aisEdit';
+		
+		if (validationStatus == "success") {
+			form.submit();
+		} else if (validationStatus == "completed") {
+			alert('You have already submitted your Account Information Form. Please note that no change can be made now.');
+		} else {
+			alert('The information entered does not match with our records. Please verify and try again.');
+		}
+	}
+	
+	function resetDefaultValues() {
+		var form = document.onlineAccountOpeningLanding;
+		form.ncrn.value = '';
+		form.cisEditdob.value = '';
+		form.ncrn.value = '';
+		form.aisEditdob.value = '';
+		form.captcha.value = '';
+		form.refNo.value = '';
+		form.dob.value = '';
+	}
+</script>
+<script type="text/javascript">
+$("#open").click(function(){
+	$("#container_a").css("display","block");
+	initModal("nrenroModal");
+    $("#nrenroModal").css("display","block");
+});
+
+$("#openacc").click(function(){
+	$("#container_b").css("display","block");
+	initModal("nrenroModalacc");
+    $("#nrenroModalacc").css("display","block");    
+});
+
+function initModal(modalId){
+	
+	$("#continueBtnAcc,#continueBtnCus").prop('disabled',true);
+	$("#continueBtnAcc,#continueBtnCus").css("opacity","0.6");
+	$("#continueBtnAcc,#continueBtnCus").css('cursor','default');
+	
+	if(modalId=="nrenroModal"){
+	$("#consetFormViewdownloadbtn").hide();	
+	$("#consetFormViewdownloadbtnNeu").hide();	
+	$("#privacyNoticeViewdownloadbtn").hide();	
+	$("#viewdownloadbtn").hide();
+	$("#mandatorymsg").hide();
+	$("#agreecontinue").hide();
+	$("#agreeclose").show();
+	yes.checked=false;
+	no.checked=false;
+	agreecust.checked=false;
+	notagree.checked=false;
+	}
+	
+	else if(modalId=="nrenroModalacc"){
+	$("#consetFormViewdownloadbtnacc").hide();	
+	$("#consetFormViewdownloadbtnNeuacc").hide();
+	$("#privacyNoticeViewdownloadbtnacc").hide();
+	$("#viewdownloadbtnacc").hide();
+	$("#mandatorymsgacc").hide();
+	$("#agreecontinueacc").hide();
+	$("#agreecloseacc").show();
+	yesacc.checked=false;
+	noacc.checked=false;
+	agreeacc.checked=false;
+	notagreeacc.checked=false;
+	}
+}
+
+$(document).ready(function(){
+	$('#nrenroModalacc input:radio[name=residence]').change(function() {
+        $("#continueBtnAcc").prop('disabled',false);
+        $("#continueBtnAcc").css("opacity","1");
+    	 $("#continueBtnAcc").css('cursor','pointer');
+   });
+
+$('#nrenroModal input:radio[name=residence]').change(function() {
+   $("#continueBtnCus").prop('disabled',false);
+   $("#continueBtnCus").css("opacity","1");
+	 $("#continueBtnCus").css('cursor','pointer');
+});
+});
+	
+
+
+
+
+$(".cancel").click(function(){
+     $("#container_a").fadeOut();
+     $("#nrenroModal").fadeOut();
+     $("#container_b").fadeOut();
+     $("#nrenroModalacc").fadeOut();
+});
+
+
+         $("#viewdownloadbtn").hide();
+		 $("#mandatorymsg").hide();
+		 $("#viewdownloadbtnacc").hide();
+		 $("#mandatorymsgacc").hide();
+		 $("#agreecontinue").hide();
+		 $("#agreecontinueacc").hide();
+		 $("#consetFormViewdownloadbtn").hide();
+		 $("#consetFormViewdownloadbtnNeu").hide();
+		 $("#privacyNoticeViewdownloadbtn").hide();	
+		 $("#consetFormViewdownloadbtnacc").hide();	
+		 $("#consetFormViewdownloadbtnNeuacc").hide();	
+		 $("#privacyNoticeViewdownloadbtnacc").hide();	
+		 
+		 			
+		  		
+		 	 $("#yes").click(function() {			
+		 			
+		 			$("#consetFormViewdownloadbtn").show();
+		 			$("#consetFormViewdownloadbtnNeu").hide();	
+		 			$("#privacyNoticeViewdownloadbtn").show();
+		 			
+		 		 });
+		     $("#no").click(function() {
+		 			$("#consetFormViewdownloadbtnNeu").show();	
+		 			$("#consetFormViewdownloadbtn").hide();
+		 			$("#privacyNoticeViewdownloadbtn").hide();			
+		 			
+		 			
+		 		 });
+		     
+		     $("#yesacc").click(function() {			
+		 			$("#consetFormViewdownloadbtnacc").show();
+		 			$("#consetFormViewdownloadbtnNeuacc").hide();
+		 			$("#privacyNoticeViewdownloadbtnacc").show();
+		 			
+		 		 });
+		     $("#noacc").click(function() {
+		 			$("#consetFormViewdownloadbtnNeuacc").show();
+		 			$("#consetFormViewdownloadbtnacc").hide();
+		 			$("#privacyNoticeViewdownloadbtnacc").hide();			
+		 		});
+		 
+         $("#agreecust").click(function() {			
+			$("#agreeclose").hide();
+			$("#mandatorymsg").hide();
+			$("#agreecontinue").show();
+			$("#viewdownloadbtn").show();
+			
+		 });
+         
+         $("#agreeacc").click(function() {			
+ 			$("#agreecloseacc").hide();
+ 			$("#mandatorymsgacc").hide();
+ 			$("#agreecontinueacc").show();
+ 			$("#viewdownloadbtnacc").show();
+ 			
+ 		 });
+		 
+		 $("#notagree").click(function() {
+			$("#viewdownloadbtn").hide();			
+			$("#agreecontinue").hide();
+			$("#agreecontinueacc").hide();
+			$("#mandatorymsg").show();
+			$("#agreeclose").show();
+			
+		 });
+		 
+		 $("#notagreeacc").click(function() {
+				$("#viewdownloadbtnacc").hide();			
+				$("#agreecontinue").hide();
+				$("#agreecontinueacc").hide();
+				$("#mandatorymsgacc").show();
+				$("#agreecloseacc").show();
+				
+			 });
+
+
+</script>
+</html>

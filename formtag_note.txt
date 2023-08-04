@@ -1,0 +1,15 @@
+The <form> tag is an HTML element that is used to create a form on a web page. It allows users to input data and submit it to a server.
+IN HTML before form tag a web page was just a readable only i.e a client user could not express feeling but with form tag we can just send our data to server express feeling about the website content e.g in amazon or other shopping website before form tag there was actually no real interaction with the server but if some one want to buy there were numbers given which were mostly busy because of too much rush on website so a user could get frustated when he/she spent time on seeing things and not buying at the same time because of busy numbers so this saw a decline in these websites. So form tag was introduced through which some one can interact with the websites. Form tag is actually a money tag for the website owners as remote users interact and get served in real time just like buying products filling form of personel details and product getting delivered. 
+Form tag itself induvidually is nothing but a wrapper  the data in it is put in form controls or html controls know as input tag which may type text, radio ,checkbox or a file etc.Finally we have a control known as submit which sends the whole form data to the server.Now where to send data we have a attribute in form tag known as action attribute where we type address of the server we want to interact. And another attibute is method which tells how to send data there are two types to send data one is get and another is post .
+ In get method data is send in header request  all in url in a key and value form.
+Syntax
+serverurl/?key=value
+key is a variable, the attribute "name" of input tag 
+which holds the data.
+
+ In post method data is send in body request
+which is hidden but we can get it by inspect on browser then network header we get it.
+
+If we want to send data as text only we have a default attribute known as enctype as application/.....
+
+But if we want to send data as text and file we have a  attribute known as enctype =multipart/.....

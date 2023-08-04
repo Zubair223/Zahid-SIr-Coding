@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div tag</title>
+    <style>
+        div{
+            border-style: dotted;
+            
+
+        }
+        #first{
+            border-style: none;
+            background-color: aqua  ;
+            height: 150px;
+            background-image: url('https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_1280.jpg');
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+        
+            
+        }
+        #second{
+            border-style: none;
+            background-color: blue;
+            height: 340px;
+            background-image: url('https://st2.depositphotos.com/1267918/47752/i/450/depositphotos_477525912-stock-photo-view-dal-lake-winter-beautiful.jpg');
+            background-repeat: no-repeat;
+            background-size:100% 100%;
+        }
+        #third{
+            border-style: none; /*means border is not there for this div*/
+            background-color: blueviolet;
+            height: 150px; /*this determines the height of the div*/
+            background-image: url('https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=');
+            background-repeat: no-repeat; /*image do not repeat*/
+            background-size:100% 100%;  /*sets width height image in div fit in whole div*/
+        }
+        .all{
+            color:lightcyan;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+    <div id="first" class="all">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+<div id="second" class="all">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+<div id="third" class="all">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus fuga deleniti eius deserunt omnis repudiandae architecto dolores accusantium vero</div>
+</div>
+
+</body>
+</html>

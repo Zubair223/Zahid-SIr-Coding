@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is the output page of Add dept form</h1>
+    <h1></h1>
+    <p></p>
+<script>
+    let query = window.location.search;
+    let urlparams = new URLSearchParams(query);
+
+    let dept_name = urlparams.get('dname');
+    let notes = urlparams.get('note');
+    let check = urlparams.get('check');
+    
+    let dept = document.getElementsByTagName('h1')[0];
+    let note = document.getElementsByTagName('p')[0];
+    let checked = document.getElementsByTagName('h1')[1];
+   // window.alert(dept); //object html heading element
+   dept.innerHTML =`Department name is  ${dept_name}`;
+
+  note.innerHTML =`Note is  ${notes}`;
+  checked.innerHTML =`checkbox is ${check}`;
+   
+</script>
+
+</body>
+</html>
