@@ -1,0 +1,2 @@
+// if there is A statement in a function then there is no need to                        write return keyword the statement will automatically return
+//Another thing to remind is that forEach does not support chaining because can't return the value it is necessary to return something to get chaining which can be done in map method or more like filter etc.

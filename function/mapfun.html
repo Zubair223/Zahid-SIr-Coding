@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x = ()=>{
+            document.write("This is thee function");
+        }
+        let obj = {
+            firstName:"Zahid Sir",
+            lastName:"Neaka",
+            address:"Eidgah",
+            Profession:"Developer",
+            arr:["12,.234,25,1,12,2"],
+            fun:x,
+            innerObj:{
+                student1:"Zubair",
+                student2:"Zaid",
+                student3:"Kafeel",
+                student4:"Kaheel",
+                student5:"Tabish",
+            }
+        }
+        Object.keys(obj).forEach((element)=>{
+            if(element == "firstName")
+            document.writeln(element  +""+ "<br>");       //we have to use the object.keys or f                              values method then only map filter will work
+        });
+
+
+        Object.values(obj).map((element)=>{document.write(element + "<br>")}); 
+
+        
+        
+        //Object.keys(arrObject)[i]);
+        
+        Object.keys(obj).map((element,index)=>
+        {
+            if(element == "firstName")
+            //document.writeln(element  +""+ "<br>");  
+            document.write(element+ " 's " + Object.keys(obj.innerObj)[0] + " " + Object.values(obj)[6].student1);
+             //+"is" + Object.values(innerObj));
+        });
+        </script>
+</body>
+</html>
