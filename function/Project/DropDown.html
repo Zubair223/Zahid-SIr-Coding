@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <select name="drop1" id="dpn1" onchange="selectTag(this)">
+            <option value="div">div </option>
+            <option value="a">a </option>
+            <option value="h2">h2 </option>
+            <option value="img">img </option>
+            <option value="form">form </option>
+            <option value="p">p </option>
+        </select>
+        <select name="drop2" id="dpn2" onchange="selectValue(this)">
+            <option value="This is the div tag">div tag value</option>
+            <option value="formDOM.html">a tag value</option>
+            <option value="This is the h2 tag">h2 tag value</option>
+            <option value="bulb_on.jpg">image tag value</option>
+            <option value="">form tag value</option>
+            <option value="This is the p tag">p tag value</option>
+        </select>
+        
+        <button type="button" name="click" onclick="btn()">Create Tag</button>
+        <script type="text/javascript">
+            var a,b;    
+            function selectTag(that)
+            {
+                //debugger;
+               // alert("hello Wow!");
+                a = that.value;
+               
+
+            }
+           function selectValue(that)
+            {
+                //debugger;
+               // alert("hello By!");
+                 b = that.value;
+                 //return b;
+               
+            }
+
+            function btn()
+            {
+                let x = document.createElement(a);
+              x.innerHTML = b;
+              document.body.appendChild(x);
+            }
+        </script> 
+
+
+
+    </div>
+    
+</body>
+</html>

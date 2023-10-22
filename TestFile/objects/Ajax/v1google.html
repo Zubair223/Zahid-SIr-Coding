@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS style for the button */
+        .image-button {
+            width: 42px;
+            height: 36px;
+            padding-bottom: 12px;
+            border: none;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFri2-GkMIdEwDowFaTkrU0MGhU97l2MqWwA&usqp=CAU');
+            background-size: cover; /* Adjust the background size as needed */
+            cursor: pointer;
+            border-radius: 25%;
+            margin-right: 435px;
+        }
+     
+    </style>
+<body>
+    <script>
+        debugger;
+        let arr = ["Login","Register"];
+        let div = document.createElement('div');
+        div.style.border = '1px solid black';
+        document.body.appendChild(div);
+        let div2= document.createElement('div');
+        let hr = document.createElement('hr');
+        for (let i = 0; i < 2; i++) {
+  let a = document.createElement('a');
+  a.href = 'http://';
+  a.textContent = arr[i];
+  a.style.textAlign = 'center';
+  //div.style.textAlign = 'right'; // Set the text alignment using the style property
+  a.style.paddingRight = '15px'; // Set the margin
+  a.style.fontSize = '18px'; // Set the margin
+  a.style.color = 'white'; 
+  div2.appendChild(a);
+  div.appendChild(div2);
+  div.style.textAlign = 'right';   
+  // Append the <a> element to the document or another container element
+    //div.appendChild(a);
+        }        
+div.append(hr);
+let div3 = document.createElement('div');
+
+let p = document.createElement('h1');
+p.innerHTML = ' کٲشُر گوگل '; 
+p.style.marginTop = '40px'; 
+p.style.fontSize = '50px'; 
+p.style.textAlign = 'center'; 
+p.style.color = 'rgb(255 255 255)'; 
+let img = document.createElement('img');
+img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFri2-GkMIdEwDowFaTkrU0MGhU97l2MqWwA&usqp=CAU';
+img.style.width = '70px';
+img.style.height = '60px';
+img.style.position = 'relative';
+img.style.bottom = '95px';
+img.style.right = '408px';
+let img1 = document.createElement('img');
+img1.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFri2-GkMIdEwDowFaTkrU0MGhU97l2MqWwA&usqp=CAU';
+img1.style.width = '70px';
+img1.style.height = '60px';
+img1.style.position = 'relative';
+img1.style.bottom = '95px';
+img1.style.right = '790px';
+//img1.style.mixBlendMode = 'multiply';
+div.style.backgroundColor = '#4d616c'; 
+div3.appendChild(p);
+div3.appendChild(img1);
+div3.appendChild(img);
+div3.style.border = '1px solid white';
+
+div.appendChild(div3);
+// div.appendChild(img);
+let div1  = document.createElement('div');
+div1.style.textAlign = 'center'; 
+div1.style.marginLeft = '36%'; 
+//div1.style.paddingLeft = '430px'; 
+div1.style.marginRight = '36%'; 
+//div1.style.paddingRight = '70px'; 
+div1.style.marginTop = '-36px'; 
+
+div1.style.border = '1px solid white';
+let text = document.createElement('input');
+text.type = 'text';
+
+
+
+
+
+text.style.width = '354px'; 
+//text.style.width = '355px'; 
+text.style.height = '33px'; 
+text.style.fontSize = '18px'; 
+text.style.border = 'none'; 
+text.style.outline = 'none'; 
+//text.style.borderRadius = '18px'; 
+text.style.paddingLeft = '19px'; 
+text.placeholder = 'Search Google or type a URL'; 
+div1.style.width = 'auto';
+//text.style.border = 'none'; 
+//text.style.paddingTop = '22px'; 
+//text.style.paddingBottom = '-12px'; 
+// let img = document.createElement('img');
+// img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFri2-GkMIdEwDowFaTkrU0MGhU97l2MqWwA&usqp=CAU';
+// img.style.width = '45px';
+// img.style.height = '35px';
+// img.style.marginBottom = '-12px';
+// img.style.marginRight = '8px';
+let btn = document.createElement('button'); 
+let input_arr = ["kashmir", "kaniyakumari","kanpur","karnataka", "kerala", "kolkata"];
+btn.className = 'image-button'; // Apply the CSS class
+
+
+div1.appendChild(text); ////////
+
+
+
+    let div4 = document.createElement("div");
+    div4.style.border = '1px solid white';
+     div4.style.marginLeft = '870px'; 
+ div4.style.marginRight = '435px';
+ div4.style.marginTop = '3px';
+    div4.appendChild(btn);
+    div.append(div4);
+      
+//div1.appendChild(img);
+        btn.onclick = function() {
+            // Define the action you want to perform when the button is clicked
+            alert('Button Clicked');
+        };
+        text.addEventListener("input", function() {
+            let inputtext = text.value;  
+            text.style.borderBottomLeftRadius = "0px"; 
+      text.style.borderBottomRightRadius = "0px"; 
+           // 
+         //var divcontent = document.createElement("div");
+            for(let i=0; i<input_arr.length; i++)
+            {
+            if(inputtext.charAt(0) == input_arr[i].charAt(0)) {
+                debugger;
+              
+                var div6 = document.createElement("div");
+                div6.classList.add('innerdiv');
+                
+
+                div6.style.width = '375px'; 
+//text.style.width = '355px'; 
+div6.style.height = '33px'; 
+div6.style.fontSize = '18px'; 
+div6.style.border = 'none'; 
+div6.style.outline = 'none'; 
+//div6.style.hover = '10px'; 
+// //for(let i = 0; i < input_arr.length; i++) 
+// div6[i].addEventListener('mouseover', ()=>{
+//     div6.style.backgroundColor = 'pink'; 
+// });
+
+//text.style.borderRadius = '18px'; 
+div6.style.marginLeft = '1px'; 
+      div6.innerHTML = input_arr[i];
+      
+      div1.appendChild(div6);
+      div1.style.borderRadius = "18px"; 
+      text.style.borderTopLeftRadius = "18px"; 
+      text.style.borderTopRightRadius = "18px"; 
+    //     if(input_arr.length-1 == i )
+    //    {
+    //         div6[i].style.borderBottomLeftRadius = "18px"; 
+    //         div6[i].style.borderBottomRightRadius = "18px"; 
+    //    }
+   
+      
+      debugger;
+     
+      //div1.style.borderRadius = "18px"; 
+
+     
+            }
+
+
+
+            else
+            {
+           //     alert("not found");
+                
+
+            }
+
+            
+        }
+
+        //text.appendChild(x);
+        var x = document.getElementsByClassName('innerdiv');
+    //     for (let i = 0; i < x.length; i++) {
+    //         x[i].style.color = 'red';
+    //            x[i].style.backgroundColor = 'white';
+    //        // x[i].style.borderRadius = '15px';
+    //         x[i].style.marginTop = '0px';
+            
+    //    //div6[i].style.borderBottomLeftRadius = "18px"; 
+    //         // div6.style.borderBottomRightRadius = "18px"; 
+    //     }
+         var lastElementIndex = x.length - 1;
+
+for (let i = 0; i < x.length; i++) {
+    x[i].style.color = 'red';
+    x[i].style.backgroundColor = 'white';
+    x[i].style.marginTop = '0px';
+
+    // If the current element is the last one, set borderBottomLeftRadius and borderBottomRightRadius
+    if (i === lastElementIndex) {
+        x[i].style.borderBottomLeftRadius = '18px';
+        x[i].style.borderBottomRightRadius = '18px';
+    }
+}
+
+        //div6[i].style.borderBottomLeftRadius = "18px"; 
+    //         div6[i].style.borderBottomRightRadius = "18px"; 
+    // div6[i].style.borderBottomLeftRadius = "18px"; 
+    //         div6[i].style.borderBottomRightRadius = "18px"; 
+        debugger;
+       // div1.appendChild(text); ////////
+        //div1.appendChild(divcontent);
+        //div1.style.borderRadius = '15px';
+       // divcontent.style.borderRadius = '-35px';
+        
+        if(inputtext == "")
+        {
+            
+            // Hide each div6 element individually
+            // const div6Elements = divcontent.getElementsByTagName("div");
+
+            // for (let i = 0; i < div6Elements.length; i++) {
+                //     div6Elements[i].style.display = "none";
+                // }
+                
+                //alert("Please enter");
+                for (let i = 0; i < x.length; i++) {
+                       
+                    x[i].style.display = "none";
+
+                }
+                text.style.borderBottomLeftRadius = "18px"; 
+      text.style.borderBottomRightRadius = "18px"; 
+        }
+        });
+        //btn.appendChild(img);
+
+div.appendChild(div1);
+div.style.paddingBottom = '85px';
+
+
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- <script>
+    let div = document.createElement('div');
+    div.style.border = '1px solid black';
+    document.body.appendChild(div);
+
+    // Create a button element
+    let btn = document.createElement('button');
+
+    // Set the CSS properties of the button
+    btn.style.width = '45px';
+    btn.style.height = '35px';
+    btn.style.border = 'none';
+    btn.style.background = 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFri2-GkMIdEwDowFaTkrU0MGhU97l2MqWwA&usqp=CAU")';
+    btn.style.backgroundSize = 'cover'; // Adjust the background size as needed
+    btn.style.cursor = 'pointer';
+
+    // Add a click event handler to the button
+    btn.addEventListener('click', function() {
+        // Define the action you want to perform when the button is clicked
+        alert('Button Clicked');
+    });
+
+    // Append the button to the div
+    div.appendChild(btn);
+</script> -->

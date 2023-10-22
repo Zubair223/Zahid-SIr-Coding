@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <label for="district" id="l">Select District</label>
+    <select name="MasjidSelection" id="district" onchange="MasjidShow(this)">
+        
+
+    </select>
+
+
+    <script>
+        let District = [{
+            district_Id: '1',
+            district_name: 'Srinagar',
+            // pincode: '190020'
+        },
+        {
+            district_Id: '2',
+            district_name: 'Baramulla',
+            // pincode: '190020'
+        },
+        {
+            district_Id: '3',
+            district_name: 'Budgam',
+            // pincode: '190020'
+        },
+        {
+            district_Id: '4',
+            district_name: 'Ganderbal',
+            // pincode: '190020'
+        }]
+
+        MasjidObj = [{
+            Masjid_id: 1000,
+            district_Id: '1',
+            Masjid_name: 'Masjid Hamzah',
+            Masjid_location: 'Ellahi bagh',
+            Masjid_Saf:'7',
+            Masjid_Floors: '3',
+            pincode:'190020',
+            Masjid_bathroom: '1',
+            Masjid_wazo_khana: '4'
+            
+        },
+        {
+            Masjid_id: 1010,
+            district_Id: '1',
+            Masjid_name: 'Masjid Aisha',
+            Masjid_location: 'Bachpora',
+            Masjid_Saf:'5',
+            Masjid_Floors: '2',
+            pincode:'190020',
+            Masjid_bathroom: '2',
+            Masjid_wazo_khana: '3'
+        },
+        {
+            Masjid_id: 1020,
+            district_Id: '2',
+            Masjid_name: 'Masjid Usman',
+            Masjid_location: 'Alamdar Colony',
+            Masjid_Saf:'7',
+            Masjid_Floors: '4',
+            pincode:'190010',
+            Masjid_bathroom: '3',
+            Masjid_wazo_khana: '4'
+        },
+        {
+            Masjid_id: 1030,
+            district_Id: '3',
+            Masjid_name: 'Masjid Umar',
+            Masjid_location: 'Eidgah',
+            Masjid_Saf:'7',
+            Masjid_Floors: '3',
+            pincode:'190014',
+            Masjid_bathroom: '1',
+            Masjid_wazo_khana: '2'
+        },
+        {
+            Masjid_id: 1040,
+            district_Id: '4',
+            Masjid_name: 'Masjid Usman',
+            Masjid_location: 'Soura',
+            Masjid_Saf:'7',
+            Masjid_Floors: '3',
+            pincode:'190011',
+            Masjid_bathroom: '2',
+            Masjid_wazo_khana: '4'
+        },
+        {
+            Masjid_id: 1050,
+            district_Id: '4',
+            Masjid_name: 'Masjid Taqwah',
+            Masjid_location: 'Soura',
+            Masjid_Saf:'7',
+            Masjid_Floors: '3',
+            pincode:'190011',
+            Masjid_bathroom: '5',
+            Masjid_wazo_khana: '10'
+        },
+        {
+            Masjid_id: 1060,
+            district_Id: '3',
+            Masjid_name: 'Masjid Bilal',
+            Masjid_location: 'Eidgah',
+            Masjid_Saf:'5',
+            Masjid_Floors: '3',
+            pincode:'190014',
+            Masjid_bathroom: '3',
+            Masjid_wazo_khana: '7'
+        },
+        {
+            Masjid_id: 1070,
+            district_Id: '1',
+            Masjid_name: 'Masjid Tawheed',
+            Masjid_location: 'Ellahi bagh',
+            Masjid_Saf:'7',
+            Masjid_Floors: '2',
+            pincode:'190020',
+            Masjid_bathroom: '1',
+            Masjid_wazo_khana: '2'
+        },
+        {
+            Masjid_id: 1080,
+            district_Id: '2',
+            Masjid_name: 'Masjid Abass',
+            Masjid_location: 'Alamdar Colony',
+            Masjid_Saf:'5',
+            Masjid_Floors: '2',
+            pincode:'190010',
+            Masjid_bathroom: '1',
+            Masjid_wazo_khana: '4'
+        }];
+//         var selectElement = document.createElement("select");
+
+// // Option 1
+// var option1 = document.createElement("option");
+// option1.value = "option1_value";
+// option1.text = "Option 1";
+// selectElement.appendChild(option1);
+
+// // Option 2
+// var option2 = document.createElement("option");
+// option2.value = "option2_value";
+// option2.text = "Option sdfe2";
+// selectElement.appendChild(option2);
+
+// // Add the select element to the DOM
+// var parentElement = document.getElementById("dropdownContainer");
+// parentElement.appendChild(selectElement);
+
+
+let x = document.getElementById('district');
+for(let i=0; i<District.length; i++) {
+        // Option 1
+var option1 = document.createElement("option");
+option1.value = District[i].district_Id; // Set the value for the option
+option1.text = District[i].district_name; // Set the text displayed for the option
+x.appendChild(option1); // Add the option to the select element
+}
+debugger;
+function MasjidShow(that)
+{
+    let x = that.value;
+    let bd = document.getElementById('main');
+    for(let i = 0; i < MasjidObj.length; i++)
+    {
+        if(that.value == MasjidObj[i].district_Id)
+        {
+            
+            // alert(x);
+            // alert("Please" + MasjidObj[i].district_Id);
+            alert(MasjidObj[i].Masjid_name);
+            let div1 = document.createElement("div");
+            div1.innerHTML = MasjidObj[i].Masjid_name;
+            bd.appendChild(div1);
+        }   
+    }
+//alert(x);
+}
+// x.addEventListener('change', function MasjidShow(that){
+
+// })
+
+
+
+
+
+
+// You can add more options as needed
+
+
+
+//         for(var i=0; i< MasjidObj.length; i++)
+//          {
+//             for(let j=0;j<MasjidObj.length-1;j++)
+//             document.write(Object.keys(MasjidObj[i])[j]+':' + Object.values(MasjidObj[i])[j]+'<br>');
+//         document.write('<hr>');
+//         }
+
+
+// debugger;
+//         let mapedObj1111 = MasjidObj.filter((item)=>{
+//             // for (let keys in item)
+//             // {
+//             //     document.write(keys+'<br>');
+//             // }
+//             // document.write('<br>');
+//             if(item.pincode == '190020')
+//             {
+//                // alert(item.pincode);
+//                 // document.write(item.pincode);
+//                 return item;
+               
+//             }
+//         }).map(item => {
+//           return `The Name of Masjidis ${item.Masjid_Floors} was ${item.pincode}`;
+//         });
+        
+//         document.write(mapedObj1111);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

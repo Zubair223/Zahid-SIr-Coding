@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <script>
+        let arr = ['+', '-', '÷', 'x', '%'];
+let input = document.getElementById('yourInputId'); // Replace 'yourInputId' with the actual ID of your input element
+
+for (let i = 0; i < arr.length; i++) {
+  debugger;
+  let z = input.value.match(new RegExp('\\' + arr[i], 'g'));
+  
+  if (z !== null) {
+    console.log('Match found for ' + arr[i] + ': ' + z.join(', '));
+  } else {
+    console.log('No match found for ' + arr[i]);
+  }
+}
+
+    </script>
+</body>
+</html>

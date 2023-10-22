@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <select name="drop1" id="State" onchange="State(this)">
+        <option value="option" id="0">-----Option------</option>
+        <option value="Kashmir" id="1">Kashmir</option>
+        <option value="Delhi" id="2">Delhi</option>
+        <option value="Bangalore" id="3">Bangalore</option>
+        <option value="Goa" id="4">Goa</option>
+    </select>
+
+    <select name="drop2" id="Place" onchange="Place(this)">
+        <option value="option" id="0">-----Option------</option>
+        <option value="Hotel" id="5">Hotel</option>
+        <option value="Rivers" id="6">Rivers</option>
+        <option value="Gardens" id="7">Gardens</option>
+        <option value="Hillstation" id="8">Hillstation</option>
+    </select>
+
+    <select name="drop3" id="Place_Name" onchange="Place_Name(this)">
+        <option value="option" id="0">-----Option------</option>
+        <option value="Santoor Hotel" id="9">Santoor Hotel</option>
+        <option value="Jehlum" id="10">Jehlum</option>
+        <option value="Nishat Garden" id="11">Nishat Garden</option>
+        <option value="Gulmarg" id="12">Gulmarg</option>
+    </select>
+    <input type="text" id="txt">
+    <button onclick="loadfile()">Load Text File</button>
+    <div id="output"></div>
+    <div id="out">
+
+    </div>
+    <script>
+       
+           var Concat;
+            debugger;
+            var a = document.getElementById("txt");
+        
+            function State(that){
+                Concat = that.value+" ";
+                a.value = Concat;
+                //alert("Selected value: " + Concat);
+            }
+            function Place(that){
+                Concat += that.value+" ";
+                a.value = Concat;
+            }
+            function Place_Name(that){
+                Concat += that.value;
+                a.value = Concat;
+            }
+        function loadfile() {
+             var xhr = new XMLHttpRequest();
+            // xhr.onreadystatechange =    function() {
+            //    console.log(xhr.readyState);
+               
+            // };
+          
+            var fileurl =  `https://www.google.com/search?q=${Concat}`;
+            xhr.onreadystatechange =    function() {
+                if(xhr.readyState == 4 && xhr.status == 200)
+                {
+                    debugger;
+                    var response = xhr.responseText;
+                    let div = document.getElementById("output");
+                    div.innerHTML = response;
+                    
+                  var anchorElements = document.getElementsByTagName('a');
+var div2 = document.createElement("div");
+var html = "";
+    var bd = document.getElementById("main");
+for (var i = 0; i < 57; i++) {
+    debugger;
+    var anchorValue = anchorElements[i].outerHTML; 
+    //html = anchorValue; 
+    
+    var div2 = document.createElement("div");
+  div2.innerHTML =  anchorValue;
+  //div2.style.width= "50%";  
+  div2.style.backgroundColor = "pink";  
+  div2.style.marginTop = "5px";  
+  div2.style.border = "px soli-d green";
+  bd.append(div2); 
+}
+
+
+
+//div2.style.borderStyle= "5px solid red";
+  
+
+ 
+//div2.style.backgroundColor="red";
+//div2.style.height="640px";
+                }
+                else
+                {
+                    document.getElementById("output").innerHTML = "nothing Error";
+                }
+            };
+            xhr.open('GET', fileurl,true);
+            // xhr.onreadystatechange =  ()=> {
+            //     console.log(xhr.readyState);
+               
+                
+            // };
+            xhr.send();
+            //     function abc() {
+            //     console.log(xhr.readyState);
+              
+            // };
+            // xhr.onreadystatechange = abc();
+        }
+    </script>
+</body>
+</html>

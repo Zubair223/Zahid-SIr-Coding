@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+<button onclick="create()">Click here</button>
+    <script>
+        function create()
+        {
+            let p= document.getElementById('main');
+            let x = document.createElement('p');
+            let xx =x.innerHTML = 'hello world   ';
+            p.append(xx);
+        }
+    </script>
+</body>
+</html>

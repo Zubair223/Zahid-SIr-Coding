@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The first name is </h1>
+    <h1>The last name is </h1>
+    <button id="btn" onclick="{
+        
+        btn.setAttribute('style','display:none');
+        window.print(array_Output);
+        }">Save</button>
+
+    <script>
+    let querystring = window.location.search;
+    let urlparam = new URLSearchParams(querystring);    
+    let firstname = urlparam.get('fname');
+    let lastname = urlparam.get('lname');
+    alert(firstname);
+    alert(lastname);
+    let AA = document.getElementsByTagName('h1')[0];
+    console.log(AA);
+    AA.innerHTML=`The first name is ${firstname}`;
+    let BB = document.getElementsByTagName('h1')[1];
+    console.log(BB);
+    BB.innerHTML=`The last name is ${lastname}`;
+
+
+    let array_Output =[];
+    array_Output.push(firstname);
+    array_Output.push(lastname);    
+
+        //array_Output.forEach((element)=>document.write(element));
+
+
+        
+
+</script>
+</body>
+</html>

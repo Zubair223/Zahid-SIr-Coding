@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    
+    <button onclick="loadfile()">Load Text File</button>
+    <div id="output"></div>
+    <div id="out">
+
+    </div>
+    <script>
+           
+        function loadfile()
+         {
+             var xhr = new XMLHttpRequest();
+    
+            var fileurl =  `C:\\Users\\hp\\Desktop\\MyFile.json`;
+            xhr.onreadystatechange =    function() {
+                if(xhr.readyState == 4 && xhr.status == 200)
+                {
+              
+                    var JsonCode = xhr.responseText;
+                    var MyJsObj = JSON.parse(JsonCode);
+               
+// Stringify the JSON object with proper formatting (indentation)
+var formattedJson = JSON.stringify(MyJsObj, null, 2);
+
+debugger;
+// Display the formatted JSON string within the "output" div
+var div1 = document.getElementById("output");
+div1.innerHTML = "<pre>" + formattedJson + "</pre>";
+var table = document.createElement("table");
+
+// Create a header row
+var headerRow = document.createElement("tr");
+
+// Iterate over the keys and create header cells for each key
+for (let i = 0; i < Object.keys(MyJsObj[0]).length; i++) {
+    var th = document.createElement("th"); // Create a new table header cell for the key
+    th.textContent = Object.keys(MyJsObj[0])[i]; // Set the content of the header cell with the key
+    
+    th.style.border = "2px solid #000"; // Add a border
+    th.style.padding = "10px"; // Set the padding
+    headerRow.appendChild(th); // Append the header cell to the header row
+}
+
+// Append the header row to the table
+table.appendChild(headerRow);
+
+// Create a data row
+
+// Iterate over the values and create data cells for each value
+debugger;
+for (let i = 0; i < MyJsObj.length; i++) {
+    var dataRow = document.createElement("tr");
+    for(let j = 0; j < Object.values(MyJsObj[0]).length ; j++) {
+    var td = document.createElement("td"); // Create a new table data cell for the value
+    td.textContent = Object.values(MyJsObj[i])[j]; // Set the content of the data cell with the value
+    td.style.border = "2px solid #000"; // Add a border
+    td.style.padding = "10px"; // Set the padding
+    dataRow.appendChild(td); // Append the data cell to the data row
+    }
+    table.appendChild(dataRow);
+}
+
+// Append the data row to the table
+
+
+table.style.border = "2px solid #000"; // Add a border to the table
+table.style.borderCollapse = "collapse"; // Collapse borders
+
+div1.appendChild(table); // Append the table to the div
+
+
+                }
+            };
+            xhr.open('GET', fileurl,true);
+            
+            xhr.send();
+         
+        }
+    </script>
+</body>
+</html>

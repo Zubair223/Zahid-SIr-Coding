@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="drop1">Dropdown outer html</label>
+     <select name=""   id="drop1" onchange="selectCountry(this)">
+        <option value="------Option------" selected>-----Option------</option>
+        <option value="ind" >India</option>
+        <option value="pak" >Pakistan</option>
+        <option value="usa" >America</option>
+        <option value="africa" >africa Africa</option>
+        
+    </select>
+    <br>
+    <label for="drop2">Dropdown inner html</label>
+    <select name="" id="drop2"  onchange="getStates(this)">
+        <option value="------Option------" style="text-align: center;" class="------Option------" selected>-------Option--------</option>
+        <option value="Hello World"  class="ind" >Jammu and Kashmir</option>
+        <option value="the paragraph tag"   class="ind">Delhi </option>
+        <option value="h1 tag"  class="ind"> U.P</option>
+        <option value="h1 tag"  class="ind"> Bangalore</option>
+        <option value="This is  tag"  class="pak">Lahore </option>
+        <option value="This is the "  class="pak"> Gujrawala</option>
+        <option value="the anchor tag"  class="pak"> Islamabad</option>
+        <option value="anchor tag"  class="pak"> Karachi</option>
+        <option value="anchor tag"  class="usa"> Los Angel </option>
+        <option value="anchor tag"  class="usa"> New York</option>
+        <option value="anchor tag"  class="usa"> Florida</option>
+        <option value="anchor tag"  class="usa"> California</option>
+        <option value="anchor tag"  class="africa"> Johannesburg</option>
+        <option value="anchor tag"  class="africa">Durban </option>
+        <option value="anchor tag"  class="africa"> Cape Town</option>
+        <option value="anchor tag"  class="africa"> Centurion</option>
+        
+    </select>
+    
+    
+    <script type="text/javascript">
+        debugger;
+        
+        // const drop1 = document.getElementById('drop1');
+        debugger;
+        // Get the text of the first option
+        // const firstOptionText = drop2.options[0].text; //----option-----
+        
+        // const firstOptionValue = drop2.options[0].value; //undefined
+        // //  Alert the value and text of the first option
+        
+        // alert('Text of the first option: ' + firstOptionText); //----option-----
+        //  alert('Value of the first option: ' + firstOptionValue);//undefined
+
+
+        // Set the style of the first option to display:block
+        //drop2.options[0].style.display = 'block';
+        
+        // Loop through the remaining options and hide them
+        for (let i = 1; i < drop2.options.length; i++) {
+  drop2.options[i].style.display = 'none';
+}
+
+// Select the first option
+drop2.selectedIndex = 0;
+
+
+function selectCountry(that)
+{
+     debugger;
+    drop1.forEach(element => {
+        alert(element);
+    });
+}
+
+
+
+
+
+// function selectCountry(that)
+// {
+//     //option.style.display = 'none';
+//             debugger;
+//               country =that.value;//country value like ind,pak
+
+
+//                 for (let i = 0; i < drop2.options.length; i++)
+//                 {
+//                     var option = drop2.options[i];
+//                     option.style.display = 'none';
+
+//                     // Check if the option's class name matches the class name you're looking for
+//                     if (option.classList.contains(country))
+//                     {
+//                         // Access the option or perform some action with it
+//                         alert(option.value);    
+//                         option.style.display = 'block';
+//                     }
+//                 }
+                  
+// }     
+
+
+    </script>
+
+</body>
+</html>

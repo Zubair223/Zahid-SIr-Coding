@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person_Obj = {
+            'Firstname' : 'John',
+            'LastName' : 'Bhai',
+            'Gender' : 'male',
+            'address' : 'hawal',
+            'city' : 'srinagar',
+            'pincode' : '190021',
+            'phone' : '424242234',
+            'email' : 'abc@gmail.com',
+            'country': 'india'
+        }
+
+        // Uncomment the loop to update object properties based on user input
+        for (let i = 0; i < Object.keys(person_Obj).length; i++) {
+            // Display the current key
+            document.write(Object.keys(person_Obj)[i] + ": ");
+
+            // Prompt the user for a value and update the object
+            const userInput = prompt("Enter a value dynamically for " + Object.keys(person_Obj)[i]);
+            person_Obj[Object.keys(person_Obj)[i]] = userInput;
+
+            // Display the updated value
+            document.write(person_Obj[Object.keys(person_Obj)[i]] + "<br>");
+        }
+
+
+
+        
+    </script>
+</body>
+</html>

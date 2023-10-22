@@ -5,9 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body id="main">
+<div id="wrapper"></div>
     <script>
-        
+    let d = document.createElement("p");
+    d.innerText= "Hello world";
+    document.getElementById("main").append(d);
+    document.getElementById("wrapper").innerHTML="What is your favorite color?";
+    //document.getElementById("main").append(d); not to use here because id is already there
+    let s =document.createElement("p");
+    s.innerHTML="What is going on here?";
+    let x = document.getElementById("wrapper").append(s);
+    d.style.color = "green";
+    let xp = document.getElementById("wrapper").getElementsByTagName("p")[0];
+    xp.style.color = "red";   //so thing is first create element then set text then append
+    document.getElementById("wrapper").style.backgroundColor = "green";
+    document.getElementById("wrapper").style.textAlign = "center";
+    
+
+
+
+    const attribute = document.createAttribute("class");
+attribute.value = "my-class";
+const element = document.createElement("div");
+element.setAttributeNode(attribute);
+
     </script>
+
 </body>
 </html>

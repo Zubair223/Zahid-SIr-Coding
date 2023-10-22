@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #outerCal{
+            /* background-color: red; */
+            margin :auto;
+            width:20.10%;
+            margin-top:10%;
+            height:280px;
+            border: 3px solid rgb(83, 95, 83);
+        }
+        .btn_num{
+            width:83px;
+            height:40px;
+            cursor:pointer;
+        }
+        </style>    
+</head>
+<body id="main">
+    <div id="outerCal">
+    <div id="textBOX">
+        <input type="text"  style="font-size:20px;height:34px;width:250px" disabled>
+    </div>
+    <div>
+        
+        <button type="button" value="X" class="btn_num" onclick="SymbolAppear(this)">Back</button>
+        <button type="button" value="c" class="btn_num" onclick="SymbolAppear(this)">AC</button>
+        <button type="button" value="%" class="btn_num" onclick="SymbolAppear(this)">%</button><br>
+        <button type="button" value="1" class="btn_num" onclick="SymbolAppear(this)">1</button>
+        <button type="button" value="2" class="btn_num" onclick="SymbolAppear(this)">2</button>
+        <button type="button" value="3" class="btn_num" onclick="SymbolAppear(this)">3</button>
+        <br />
+        <button type="button" value="4" class="btn_num" onclick="SymbolAppear(this)">4</button>
+        <button type="button" value="5" class="btn_num" onclick="SymbolAppear(this)">5</button>
+        <button type="button" value="6" class="btn_num" onclick="SymbolAppear(this)">6</button>
+        <br>
+        <button type="button" value="7" class="btn_num" onclick="SymbolAppear(this)">7</button>
+        <button type="button" value="8" class="btn_num" onclick="SymbolAppear(this)">8</button>
+        <button type="button" value="9" class="btn_num" onclick="SymbolAppear(this)">9</button>
+        <br>
+        <button type="button" value="+" class="btn_num" onclick="SymbolAppear(this)">+</button>
+        <button type="button" value="0" class="btn_num" onclick="SymbolAppear(this)">0</button>
+        <button type="button" value="-" class="btn_num" onclick="SymbolAppear(this)">–</button>
+        <br>
+        <button type="button" value="x" class="btn_num" onclick="SymbolAppear(this)">x</button>
+        <button type="button" value="÷" class="btn_num" onclick="SymbolAppear(this)">÷</button>
+        <button type="button" value="=" class="btn_num" onclick="SymbolAppear(this)">=</button>
+        
+    </div>
+    </div>
+    <script>
+        
+        let data = [];
+        let arr = ['+', '-', '÷', 'x', '%'];
+        function SymbolAppear(that) {   
+            debugger;
+             alert(that.value);
+            let input = document.getElementsByTagName('input')[0];
+            //for(let i=0; i<that.value.length; i++) 
+                //input.value += that.value;
+                data.push(that.value);
+                
+                input.value += that.value;
+              
+                if (input.value.charAt(input.value.length - 1) === 'X') {
+  // Check if the value is equal to 'X'
+  input.value = input.value.slice(0, -2); // Remove the last character from the value
+  data.pop();
+}
+                if (input.value.charAt(input.value.length - 1) === 'c') {
+  // Check if the value is equal to 'X'
+  input.value = ''; // Remove the last character from the value
+  data = [];
+}
+                //alert(input.value);
+               if(that.value == '=')
+               {
+                 
+debugger;
+let p=0;
+let x=0;
+let popedOp=0;
+let res=0;
+let popedElement=0;
+
+                for(let i=0; i<data.length; i++)
+                {
+                    alert(data[0]);
+                    if(data[0] != "+")
+                    {
+                        let popedElement = data.shift();
+                        p = p + popedElement;
+                    }
+                    else
+                    {
+                        popedOp = data.shift();
+                        alert(popedOp);
+                        let res1 = p;
+                        let op = popedOp;
+                        if(data[0] != '+')
+                        {
+                        popedElement = data.shift();
+                        if(res > 0)
+                        {
+                            if(op == '+')
+                            {
+                            res = parseInt(res) + parseInt(popedElement);
+                            alert(res);
+                            //return;
+                            }
+                        }
+                        x = x + popedElement;
+                        }
+                       
+                        if(op == '+')
+                        {
+                             res = parseInt(res1) + parseInt(x);
+                             alert(res);
+                             
+                        }
+                    }
+                    
+                }
+
+                data = [];
+
+
+
+
+            }
+        }
+
+
+
+
+
+
+
+
+//                     let z = input.value.match(/\+/);
+
+//                     for(let i = 0; i < arr.length; i++)
+//                     {
+//                        // let z = input.value.match(/\+/);
+//                        let operator = arr[i];
+//   let regex = new RegExp('\\' + operator, 'g');
+//   let matches = input.value.match(regex);
+
+//   if (matches !== null) 
+//   {
+//                     let indexOfPlus = input.value.indexOf(matches[i]);
+        
+//         let numberBeforePlus = input.value.slice(0, indexOfPlus);
+        
+//          let numberAfterPlus = input.value.slice(indexOfPlus+1,input.value.length-1);
+//         // alert(numberAfterPlus);
+        
+//         let z = numberAfterPlus.indexOf(matches[i]);
+//         alert(z);
+//         //input.value.indexOf(matches[i]);
+//         let numAfteroperator = input.value.slice(indexOfPlus+1,z);
+
+//          input.value="";
+//          if(matches == '+'){
+//         input.value = parseInt(numberBeforePlus) + parseInt(numberAfterPlus);
+//         break;
+//         }
+//          else if(matches == '-'){
+//         input.value = parseInt(numberBeforePlus) - parseInt(numberAfterPlus);
+//         break;
+//         }
+//          else if(matches == '÷'){
+//         input.value = parseInt(numberBeforePlus) / parseInt(numberAfterPlus);
+//         break;
+//         }
+//          else if(matches == 'x'){
+//         input.value = parseInt(numberBeforePlus) * parseInt(numberAfterPlus);
+//         break;
+//         }
+//         else if(matches == '%'){
+//         input.value = parseInt(numberBeforePlus) % parseInt(numberAfterPlus);
+//         break;
+//         }
+//                        //input.disabled = true;
+                    
+//             }  
+            
+        
+
+//         }
+//     }
+//}
+    </script>
+</body>
+</html>

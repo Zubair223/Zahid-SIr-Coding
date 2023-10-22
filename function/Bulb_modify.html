@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id ="main">
+    <button id="btn1"  onclick="create()">ON the bulb</button>
+    
+    <script>
+        var x;
+        var img;
+        window.onload = function() {
+        document.getElementById("btn1").style.height = "30px";
+        document.getElementById("btn1").style.fontSize = "25px";
+         x = document.getElementById("main");
+         img = document.createElement("img");
+        img.src = "../images/bulb_off.jpg";
+                img.style.width = "200px";
+                img.style.marginLeft = "400px";
+                
+            x.appendChild(img);
+        }
+
+
+
+        //let v = document.getElementById('btn1').innerHTML = "OFF the bulb";
+        
+     function create()
+            {
+                if(document.getElementById('btn1').innerHTML == "ON the bulb")
+                {
+                //document.getElementById('btn1').innerHTML = "ON the bulb";
+                img.src = "../images/bulb_on.jpg";
+                img.style.width = "340px";
+                img.style.height = "290px";
+                img.style.marginLeft = "325px";
+                
+                x.appendChild(img);
+                document.getElementById('btn1').innerHTML = "OFF the bulb";
+                }
+            
+                else if(document.getElementById('btn1').innerHTML == "OFF the bulb")
+                {
+                        
+                    img.src = "../images/bulb_off.jpg";
+                    img.style.width = "200px";
+                    img.style.marginLeft = "400px";
+                
+                    x.appendChild(img);
+                    document.getElementById('btn1').innerHTML = "ON the bulb";
+                }
+        
+            }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

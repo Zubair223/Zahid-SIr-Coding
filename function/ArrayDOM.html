@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id = "main">
+    <script>
+        //let x =document.createElement('p');
+        let b = document.getElementById('main');
+        let arr = ["Zahid_Sir","zubair","Zaid","Kafeel","Kaheel","tabish","Voilet","Indigo","Blue","Green","yellow","Orange","red"];
+        
+        for(let i=0; i<arr.length; i++)
+        {
+            if(arr[i].charAt(0).toLowerCase() == 'V'.toLowerCase())
+            {
+                
+                let x =document.createElement('p');
+                x.innerHTML =arr[i];
+                // let p =x.style.color = 'red';
+                x.style.color = 'voilet';
+                 b.append(x);
+
+
+            }
+            else if(arr[i].charAt(0).toLowerCase() == 'I'.toLowerCase())
+            {
+                let x =document.createElement('p');
+                x.innerHTML =arr[i];
+                // let p =x.style.color = 'red';
+                x.style.color = 'indigo';
+                 b.append(x);
+
+            }
+            else if(arr[i].charAt(0).toLowerCase() == 'B'.toLowerCase())
+            {
+                let x =document.createElement('p');
+                x.innerHTML =arr[i];
+                // let p =x.style.color = 'red';
+                x.style.color = 'blue';
+                 b.append(x);
+
+            }
+            
+            else if(arr[i].charAt(0).toLowerCase() == 'G'.toLowerCase())
+            {
+                let x =document.createElement('p');
+                x.innerHTML =arr[i];
+                // let p =x.style.color = 'red';
+                x.style.color = 'green';
+                 b.append(x);
+
+            }
+            else if(arr[i].charAt(0).toLowerCase() == 'Y'.toLowerCase())
+            {
+                let x =document.createElement('p');
+                x.innerHTML =arr[i];
+                // let p =x.style.color = 'red';
+                x.style.color = 'yellow';
+                 b.append(x);
+
+            }
+            else if(arr[i].charAt(0).toLowerCase() == 'O'.toLowerCase())
+            {
+                let x =document.createElement('p');
+                x.innerHTML =arr[i];
+                // let p =x.style.color = 'red';
+                x.style.color = 'orange';
+                 b.append(x);
+
+            }
+            else if(arr[i].charAt(0).toLowerCase() == 'R'.toLowerCase())
+            {
+                let x =document.createElement('p');
+                x.innerHTML =arr[i];
+                // let p =x.style.color = 'red';
+                x.style.color = 'red';
+                 b.append(x);
+
+            }
+            else
+            {
+                let x =document.createElement('p');
+                x.innerHTML =arr[i];
+                // // let p =x.style.color = 'red';
+                // x.style.color = 'Black';
+                 b.append(x);
+
+            }
+        }
+        VIBGYOR
+    </script>
+</body>
+</html>

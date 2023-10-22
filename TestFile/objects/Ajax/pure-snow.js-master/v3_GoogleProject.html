@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS style for the button */
+        .image-button {
+            width: 42px;
+            height: 36px;
+            top:239px;
+            left:889px;
+            position: absolute;
+            border: none;
+            background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZOL7WvTVxIcVbytN2VMO6lmK3eb8-Fecq7g&usqp=CAU');
+            background-size: cover; /* Adjust the background size as needed */
+            cursor: pointer;
+            border-radius: 25%;
+            margin-right: 435px;
+        }
+        #text {
+      position: relative !important;
+      z-index: 8  !important;
+      text-shadow: 8px 8px 8px rgba(180, 136, 136, 0.5) !important;
+      color: #d51515; /* Burgundy */
+ /* Dark Green */
+  /* Dark Gray */
+  /* Dark Blue */
+ /* Change this to the text color you want when selected */
+ 
+    }
+ 
+    </style>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./pure-snow.js" defer></script>
+<body>
+    <div id="snow" count="500"></div>
+    <!-- <div 
+      id="toggle-snow"
+      type="checkbox" 
+      checked="true" 
+      onclick="showSnow(this.checked == true)"
+    >
+      
+    </div> -->
+    <!-- <h1 style="text-align:center;">Hello winter</h1> -->
+    <script>
+        debugger;
+        let arr = ["Login","Register"];
+        document.body.style.overflowY = "hidden";
+
+        let divappend = document.createElement('div');
+        let div = document.createElement('div');
+        div.style.border = '5px solid purple';
+        //div.style.height = '495px';
+        divappend.appendChild(div);
+        document.body.appendChild(divappend);
+        let div2= document.createElement('div');
+        let hr = document.createElement('hr');
+        for (let i = 0; i < 2; i++) {
+  let a = document.createElement('a');
+  a.href = 'http://';
+  a.textContent = arr[i];
+  a.addEventListener('mouseover', function (e) {
+    a.style.color = 'black';
+    a.style.fontSize = '28px';
+
+});
+  a.addEventListener('mouseout', function (e) {
+    a.style.color = 'white';
+    a.style.fontSize = '21px';
+});
+
+  a.style.textAlign = 'center';
+  //div.style.textAlign = 'right'; // Set the text alignment using the style property
+  a.style.paddingRight = '15px'; // Set the margin
+  div2.style.paddingTop = '8px'; // Set the margin
+  a.style.fontSize = '21px'; // Set the margin
+  a.style.color = 'white'; 
+  a.style.textDecoration = 'none'; 
+  div2.appendChild(a);
+  div.appendChild(div2);
+  div.style.textAlign = 'right';   
+  // Append the <a> element to the document or another container element
+    //div.appendChild(a);
+        }        
+//div.append(hr);
+let div3 = document.createElement('div');
+
+let p = document.createElement('h1');
+p.id = "text";
+p.innerHTML = ' کٲشُر گوگل '; 
+p.style.marginTop = '70px'; 
+p.style.fontSize = '65px'; 
+p.style.textAlign = 'center'; 
+p.style.color = 'rgb(255 255 255)'; 
+let img = document.createElement('img');
+img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFri2-GkMIdEwDowFaTkrU0MGhU97l2MqWwA&usqp=CAU';
+img.style.width = '70px';
+img.style.height = '60px';
+img.style.position = 'relative';
+img.style.paddingTop = '10px'; 
+img.style.bottom = '125px';
+img.style.right = '380px';
+img.style.mixBlendMode = 'multiply';
+let img1 = document.createElement('img');
+img1.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFri2-GkMIdEwDowFaTkrU0MGhU97l2MqWwA&usqp=CAU';
+img1.style.width = '70px';
+img1.style.height = '60px';
+img1.style.position = 'relative';
+img1.style.bottom = '125px';
+img1.style.right = '790px';
+img1.style.mixBlendMode = 'multiply';
+div.style.backgroundColor = '#4d616c'; 
+div3.appendChild(p);
+div3.appendChild(img1);
+div3.appendChild(img);
+//div3.style.border = '1px solid red';
+//div3.style.marginBottom = '-25px ';
+div.style.backgroundImage = "url('https://im.rediff.com/news/2015/dec/11kashmir9.jpg')";
+div.style.backgroundRepeat = "no-repeat";
+div.style.backgroundSize = "100% 100%";
+
+div.appendChild(div3);
+// div.appendChild(img);
+let div1  = document.createElement('div');
+div1.style.textAlign = 'center'; 
+div1.style.marginLeft = '35%'; 
+//div1.style.paddingLeft = '430px'; 
+//div1.style.marginRight = '36%'; 
+//div1.style.paddingRight = '70px'; 
+//div1.style.marginTop = '-6px'; 
+
+div1.style.border = '1px solid red';
+//div1.style.width = '620px'; 
+let text = document.createElement('input');
+text.type = 'text';
+
+
+
+
+
+text.style.width = '378px'; 
+//text.style.width = '355px'; 
+text.style.height = '38px'; 
+text.style.fontSize = '18px'; 
+text.style.border = 'none'; 
+text.style.outline = 'none'; 
+//text.style.borderRadius = '18px'; 
+text.style.paddingLeft = '19px'; 
+text.placeholder = 'Search Query or type a URL'; 
+div1.style.width = '400px';
+div1.style.marginTop = '-28px';
+//text.style.border = 'none'; 
+//text.style.paddingTop = '22px'; 
+//text.style.paddingBottom = '-12px'; 
+// let img = document.createElement('img');
+// img.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFri2-GkMIdEwDowFaTkrU0MGhU97l2MqWwA&usqp=CAU';
+// img.style.width = '45px';
+// img.style.height = '35px';
+// img.style.marginBottom = '-12px';
+// img.style.marginRight = '8px';
+let btn = document.createElement('button'); 
+//let input_arr = ["jashmir", "kaniyakumari","kanpur","jarnataka", "kerala", "kolkata"];
+let input_arr = JSON.parse(localStorage.getItem('input_arr')) || [];
+ //input_arr =  JSON.parse(localStorage.getItem('inputArr')) || [];
+btn.className = 'image-button'; // Apply the CSS class
+//btn.style.mixBlendMode = 'multiply';
+btn.style.width = '48px';
+    btn.style.height = '42px';
+    btn.style.marginLeft = '0%';
+    btn.id = 'scrollButton';
+    btn.style.border = 'none';
+div1.appendChild(text); ////////
+
+
+
+    let div4 = document.createElement("div");
+    //div4.style.border = '1px solid white';
+     //div4.style.marginLeft = '870px'; 
+ div4.style.marginRight = '435px';
+ btn.style.marginTop = '40px';
+    div4.appendChild(btn);
+    div.append(div4);
+      
+//div1.appendChild(img);
+
+
+
+       
+       
+
+
+
+
+
+        text.addEventListener("input", function(event) {
+debugger;
+            let inputtext = text.value;  
+           
+         //var divcontent = document.createElement("div");
+         input_arr = [...new Set(input_arr)]; //remove duplicates in array
+         let count = 0;
+            for(let i=0; i<input_arr.length; i++)
+            {
+
+if((inputtext.charAt(0) == input_arr[i].charAt(0)) && text.value.length <= 1 && inputtext != "" && count != 5) {
+
+                debugger;
+                count++;
+                text.style.borderBottomLeftRadius = "0px"; 
+      text.style.borderBottomRightRadius = "0px"; 
+                var div6 = document.createElement("div");
+                div6.classList.add('innerdiv');
+
+
+
+               
+
+
+
+                div6.style.width = '399px'; 
+//text.style.width = '355px'; 
+div6.style.height = '33px'; 
+div6.style.fontSize = '18px'; 
+div6.style.border = 'none'; 
+div6.style.outline = 'none'; 
+//div6.style.hover = '10px'; 
+
+//text.style.borderRadius = '18px'; 
+div6.style.marginLeft = '1px'; 
+      div6.innerHTML = input_arr[i];
+      div6.addEventListener('mouseover', function()
+                {
+                    this.style.backgroundColor = "#dee4e3";
+                    text.value = this.innerHTML;
+                }) 
+      div6.addEventListener('mouseout', function()
+                {
+                    this.style.backgroundColor = "white";
+                }) 
+                div1.appendChild(div6);
+
+//       debugger;
+// const div5 = document.querySelectorAll('.div6');
+
+// for (let i = 0; i < div6.length; i++) {
+//   div5[i].addEventListener('mouseover', () => {
+//     div[i].style.backgroundColor = 'pink';
+//   });
+// }
+
+      div1.style.borderRadius = "18px"; 
+      text.style.borderTopLeftRadius = "18px"; 
+      text.style.borderTopRightRadius = "18px"; 
+    //     if(input_arr.length-1 == i )
+    //    {
+    //         div6[i].style.borderBottomLeftRadius = "18px"; 
+    //         div6[i].style.borderBottomRightRadius = "18px"; 
+    //    }
+   
+      
+      debugger;
+     
+      //div1.style.borderRadius = "18px"; 
+
+     
+            }
+
+
+
+    //         else if(!inputtext.charAt(0))
+    //         {
+    //        //     alert("not found");
+                
+    //        text.style.borderBottomLeftRadius = "18px"; 
+    //   text.style.borderBottomRightRadius = "18px"; 
+                
+    //        text.style.borderTopLeftRadius = "18px"; 
+    //   text.style.borderTopRightRadius = "18px"; 
+
+    //        div1.style.borderBottomLeftRadius = "18px"; 
+    //        div1.style.borderBottomRightRadius = "18px"; 
+                
+    //        div1.style.borderTopLeftRadius = "18px"; 
+    //        div1.style.borderTopRightRadius = "18px"; 
+    //         }
+
+            
+        }
+
+        //text.appendChild(x);
+        var x = document.getElementsByClassName('innerdiv');
+          
+
+    //     for (let i = 0; i < x.length; i++) {
+    //         x[i].style.color = 'red';
+    //            x[i].style.backgroundColor = 'white';
+    //        // x[i].style.borderRadius = '15px';
+    //         x[i].style.marginTop = '0px';
+            
+    //    //div6[i].style.borderBottomLeftRadius = "18px"; 
+    //         // div6.style.borderBottomRightRadius = "18px"; 
+    //     }
+         var lastElementIndex = x.length - 1;
+
+for (let i = 0; i < x.length; i++) {
+    x[i].style.color = 'red';
+    x[i].style.backgroundColor = 'white';
+    x[i].style.marginTop = '0px';
+
+    // If the current element is the last one, set borderBottomLeftRadius and borderBottomRightRadius
+    if (i === lastElementIndex) {
+        x[i].style.borderBottomLeftRadius = '18px';
+        x[i].style.borderBottomRightRadius = '18px';
+    }
+}
+
+        //div6[i].style.borderBottomLeftRadius = "18px"; 
+    //         div6[i].style.borderBottomRightRadius = "18px"; 
+    // div6[i].style.borderBottomLeftRadius = "18px"; 
+    //         div6[i].style.borderBottomRightRadius = "18px"; 
+        debugger;
+       // div1.appendChild(text); ////////
+        //div1.appendChild(divcontent);
+        //div1.style.borderRadius = '15px';
+       // divcontent.style.borderRadius = '-35px';
+        
+        if(inputtext == "")
+        {
+            
+            // Hide each div6 element individually
+            // const div6Elements = divcontent.getElementsByTagName("div");
+
+            // for (let i = 0; i < div6Elements.length; i++) {
+                //     div6Elements[i].style.display = "none";
+                // }
+                
+                //alert("Please enter");
+                for (let i = 0; i < x.length; i++) {
+                       
+                    x[i].style.display = "none";
+
+                }
+                text.style.borderBottomLeftRadius = "18px"; 
+      text.style.borderBottomRightRadius = "18px"; 
+        }
+        });
+        //btn.appendChild(img);
+        text.addEventListener("blur", function() {
+            debugger;
+            //alert("Please enter");
+            let x = document.getElementsByClassName('innerdiv');
+            for (let i = 0; i < x.length; i++) {
+                text.style.borderBottomLeftRadius = "0px"; 
+          text.style.borderBottomRightRadius = "0px"; 
+                       
+                       x[i].style.display = "none";
+                       text.style.borderBottomLeftRadius = "18px"; 
+      text.style.borderBottomRightRadius = "18px"; 
+                   }
+        });
+
+        
+        div.appendChild(div1);
+        div.style.marginTop ='3px';
+        div.style.paddingBottom = '327px';
+        //btn.id = scrollButton;
+        var div7 = document.createElement('div');
+        btn.addEventListener('click', function() {
+            debugger;
+            // Define the action you want to perform when the button is clicked
+           // alert('Button Clicked');
+           document.body.style.setProperty("overflow-y", "", "important");
+
+
+           alert(text.value);
+            input_arr.push(text.value);
+            localStorage.setItem('input_arr', JSON.stringify(input_arr));
+
+
+//             if (!input_arr.includes(text.value)) {
+//   // If it doesn't exist, push the value into the array
+//   input_arr.push(inputValue);
+
+//   // Update the data in localStorage with the new array
+//   localStorage.setItem('input_arr', JSON.stringify(input_arr));
+// }
+
+
+
+//localStorage.clear();
+            
+      let link = `https://www.google.com/search?q=${text.value}`;
+      fetch(link).
+      then((response) =>{
+        if(response.ok)
+        {
+          return response.text();
+        }
+      } ).
+      then(data => {
+        {
+     
+      {
+    
+
+
+          
+          
+          
+          let response = data;
+          div7.innerHTML = response;
+          div7.id = 'hello';
+
+
+
+          
+          
+          div7.style.marginLeft = '20%';
+          div7.style.marginRight = '20%';
+          div7.style.border = '1px solid black';
+          //div7.style.textAlign = 'center';
+          
+          
+          //  let bd = document.getElementById("main");  
+          //div7.style.marginTop = '585px';
+          
+
+
+
+
+          divappend.appendChild(div7);
+          
+          div3.style.paddingBottom = '52px';
+                //div1.style.marginLeft = '3px';
+        
+            }    
+            
+        }    
+          ////////////////////////////////////
+                    debugger;
+//           //Get a reference to the button
+const scrollButton = document.getElementById('scrollButton');
+
+// Get a reference to the element you want to scroll to
+const helloDiv = document.getElementById('hello');
+
+// Add a click event listener to the button
+//scrollButton.addEventListener('click', () => {
+    // Calculate the target position of the #hello div
+    const targetPosition = helloDiv.getBoundingClientRect().top + window.scrollY;
+
+    // Scroll smoothly to the target position
+    window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+     });
+//});
+
+
+
+/////////////////////////////////////////////
+        
+
+
+// id="toggle-snow"
+//       type="checkbox" 
+//       checked="true" 
+//       onclick="showSnow(this.checked == true)"
+// div.id = "toggle-snow";
+// div.type = "checkbox";
+// div.style.checked = "true";
+// div.addEventListener("click", function showSnow(){
+//     this.checked == true;
+// });
+
+
+
+
+debugger;
+let d = document.getElementsByClassName('sfbg');
+let d1 = document.getElementsByClassName('SDkEP');
+let d2 = document.getElementsByClassName('RNNXgb');
+//const elementToInspect = document.querySelector("tag");
+let anchor = document.getElementsByTagName('a');
+
+for (var i = 0; i < d.length; i++) {
+    d[i].style.display = 'none';
+    d1[i].style.display = 'none';
+    d2[i].style.display = 'none';
+    anchor[i].style.color ="red";
+        }
+
+// for (var i = 0; i < d.length; i++) {
+
+//     d8[i].style.backgroundColor = "red";
+
+//         }
+
+for (var i = 0; i < anchor.length; i++) {
+   
+    anchor[i].style.color ="red";
+   
+        }
+})
+});
+
+
+
+
+
+    </script>
+</body>
+</html>

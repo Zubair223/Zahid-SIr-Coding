@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main">
+    <input type="text" id="txt">
+    <button onclick="loadfile()">Load Text File</button>
+    <div id="output"></div>
+    <div id="out">
+
+    </div>
+    <script>
+        function loadfile() {
+             var xhr = new XMLHttpRequest();
+            // xhr.onreadystatechange =    function() {
+            //    console.log(xhr.readyState);
+               
+            // };
+            var a = document.getElementById("txt");
+            var fileurl =  `https://www.google.com/search?q=${a.value}`;
+            xhr.onreadystatechange =    function() {
+                if(xhr.readyState == 4 && xhr.status == 200)
+                {
+                    debugger;
+                    var response = xhr.responseText;
+                    let div1 = document.getElementById("output");
+                    div1.innerHTML = response;
+                    
+                  var anchorElements = document.getElementsByTagName('a');
+var div2 = document.createElement("div");
+var html = "";
+    var bd = document.getElementById("main");
+
+for (var i = 0; i < anchorElements.length; i++) {
+    
+  var anchorValue = anchorElements[i].outerHTML; // Get the text content within the anchor tag
+  html += anchorValue + "<br>"; // Add each anchor's value to the HTML string
+}
+div2.innerHTML = html;
+bd.appendChild(div2); 
+
+//div2.style.borderStyle= "5px solid red";
+  
+
+ 
+//div2.style.backgroundColor="red";
+//div2.style.height="640px";
+                }
+                else
+                {
+                    document.getElementById("output").innerHTML = "nothing Error";
+                }
+            };
+            xhr.open('GET', fileurl,true);
+            // xhr.onreadystatechange =  ()=> {
+            //     console.log(xhr.readyState);
+               
+                
+            // };
+            xhr.send();
+            //     function abc() {
+            //     console.log(xhr.readyState);
+              
+            // };
+            // xhr.onreadystatechange = abc();
+        }
+    </script>
+</body>
+</html>

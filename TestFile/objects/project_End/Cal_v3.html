@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        #outerCal{
+            /* background-color: red; */
+            margin :auto;
+            width:20.10%;
+            margin-top:10%;
+            height:280px;
+            border: 3px solid rgb(83, 95, 83);
+        }
+        .btn_num{
+            width:83px;
+            height:40px;
+            cursor:pointer;
+        }
+        </style>    
+</head>
+<body id="main">
+    <div id="outerCal">
+    <div id="textBOX">
+        <input type="text"  style="font-size:20px;height:34px;width:250px" disabled>
+    </div>
+    <div>
+        
+        <button type="button" value="X" class="btn_num" onclick="SymbolAppear(this)">Back</button>
+        <button type="button" value="c" class="btn_num" onclick="SymbolAppear(this)">AC</button>
+        <button type="button" value="%" class="btn_num" onclick="SymbolAppear(this)">%</button><br>
+        <button type="button" value="1" class="btn_num" onclick="SymbolAppear(this)">1</button>
+        <button type="button" value="2" class="btn_num" onclick="SymbolAppear(this)">2</button>
+        <button type="button" value="3" class="btn_num" onclick="SymbolAppear(this)">3</button>
+        <br />
+        <button type="button" value="4" class="btn_num" onclick="SymbolAppear(this)">4</button>
+        <button type="button" value="5" class="btn_num" onclick="SymbolAppear(this)">5</button>
+        <button type="button" value="6" class="btn_num" onclick="SymbolAppear(this)">6</button>
+        <br>
+        <button type="button" value="7" class="btn_num" onclick="SymbolAppear(this)">7</button>
+        <button type="button" value="8" class="btn_num" onclick="SymbolAppear(this)">8</button>
+        <button type="button" value="9" class="btn_num" onclick="SymbolAppear(this)">9</button>
+        <br>
+        <button type="button" value="+" class="btn_num" onclick="SymbolAppear(this)">+</button>
+        <button type="button" value="0" class="btn_num" onclick="SymbolAppear(this)">0</button>
+        <button type="button" value="-" class="btn_num" onclick="SymbolAppear(this)">–</button>
+        <br>
+        <button type="button" value="x" class="btn_num" onclick="SymbolAppear(this)">x</button>
+        <button type="button" value="÷" class="btn_num" onclick="SymbolAppear(this)">÷</button>
+        <button type="button" value="=" class="btn_num" onclick="SymbolAppear(this)">=</button>
+        
+    </div>
+    </div>
+    <script>
+        debugger;
+
+//         let cl = document.getElementsByClassName('btn_num');
+//         cl.addEventListener('mouseover', ()=>{
+//                    for (let i = 0; i < cl.length; i++) {
+//     //elements[i].style.color = "red";
+//     cl[i].style.color = "red";
+//   }});
+
+  let cl = document.getElementsByClassName('btn_num');
+
+for (let i = 0; i < cl.length; i++) {
+  cl[i].addEventListener('mouseover', () => {
+    cl[i].style.color = "red";
+  });
+}
+
+for (let i = 0; i < cl.length; i++) {
+  cl[i].addEventListener('mouseout', () => {
+    cl[i].style.color = "";
+  });
+}
+
+
+
+        function SymbolAppear(that) {   
+           // alert(that.value);
+            let input = document.getElementsByTagName('input')[0];
+            //for(let i=0; i<that.value.length; i++) 
+                //input.value += that.value;
+                input.value += that.value;
+              
+                if (input.value.charAt(input.value.length - 1) === 'X') {
+  // Check if the value is equal to 'X'
+  input.value = input.value.slice(0, -2); // Remove the last character from the value
+}
+                if (input.value.charAt(input.value.length - 1) === 'c') {
+  // Check if the value is equal to 'X'
+  input.value = ''; // Remove the last character from the value
+}
+                //alert(input.value);
+               if(that.value == '=')
+               {
+                    // //for(x of input.value)
+                    // {
+                    //     let bd = document.getElementById('main');
+                    //     let a = document.createElement('h1');
+                    //     a.innerHTML = input.value;
+                    //     bd.appendChild(a);
+                    // }
+
+
+
+//                     let text = "The rain in SPAIN stays mainly in the plain";
+// let result = text.match("ain");
+// alert(result);
+debugger;
+let arr = ['+', '-', '÷', 'x', '%'];
+                    let z = input.value.match(/\+/);
+
+                    // let operator = arr[i];
+                    // let indices = [];
+                    // let index = input.value.indexOf(operator);
+                    
+                  //  alert(z);
+                   
+ 
+
+                    for(let i = 0; i < arr.length; i++)
+                    {
+                       // let z = input.value.match(/\+/);
+                       let operator = arr[i];
+  let regex = new RegExp('\\' + operator, 'g');
+  let matches = input.value.match(regex);
+
+  if (matches !== null) 
+  {
+                    let indexOfPlus = input.value.indexOf(matches);
+                  //  alert(indexOfPlus);
+                   // let mat = input.value.match(/\+/g);
+        
+        let numberBeforePlus = input.value.slice(0, indexOfPlus);
+        // alert(numberBeforePlus);
+        //  let indexOfPlus1 = input.value.indexOf(mat)[1];
+        //             alert(indexOfPlus1);
+        
+         let numberAfterPlus = input.value.slice(indexOfPlus+1,input.value.length-1);
+        // alert(numberAfterPlus);
+        
+         input.value="";
+         if(matches == '+'){
+        input.value = parseInt(numberBeforePlus) + parseInt(numberAfterPlus);
+        break;
+        }
+         else if(matches == '-'){
+        input.value = parseInt(numberBeforePlus) - parseInt(numberAfterPlus);
+        break;
+        }
+         else if(matches == '÷'){
+        input.value = parseInt(numberBeforePlus) / parseInt(numberAfterPlus);
+        break;
+        }
+         else if(matches == 'x'){
+        input.value = parseInt(numberBeforePlus) * parseInt(numberAfterPlus);
+        break;
+        }
+        else if(matches == '%'){
+        input.value = parseInt(numberBeforePlus) % parseInt(numberAfterPlus);
+        break;
+        }
+                       //input.disabled = true;
+                    
+            }  
+            
+        
+
+        }
+    }
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTdiv3PE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<boddiv3 id="main">
+    <script>
+        let div1 = document.createElement('div');
+       // div1.innerHTML = "Hello world!";
+
+        let div2 = document.createElement('div');
+  div1.appendChild(div2);
+//div2.innerHTML = "Hello world2!";
+        let div3 = document.createElement('div');
+        div2.appendChild(div3);
+//div3.innerHTML = "Hello world3!";
+        let div4 = document.createElement('div');
+      div3.appendChild(div4);
+//div4.innerHTML = "Hello world4!";
+        let div5 = document.createElement('div');
+      div4.appendChild(div5);
+//div4.innerHTML = "Hello world4!";
+main.appendChild(div1);
+
+
+
+
+
+
+let arr = [div1, div2, div3, div4,div5]
+
+// arr.forEach((element)=>{console.log(element );});
+// main.append(arr);
+let logo = document.createElement('img');
+logo.src = '../images/bulb_off.jpg';
+logo.style.width = '6%';
+logo.style.height = '12%';
+logo.style.listStyle = 'none';
+//let n = document.createElement('div');
+
+//main.append(logo);
+//entry.push(logo);
+let entry = ["News","Latest News","Srinagar Times","Contact"];
+//entry.reverse();
+let x =document.createElement('ul');
+let c =document.createElement('li');
+for(let i=0 ; i<arr.length ; i ++)
+{
+    //document.write(arr[i].innerHTML);
+    let l =document.createElement('li');
+    c.append(logo);
+    //l.innerHTML=logo;
+    l.innerHTML = entry[i];
+    //  p.append(l);
+
+    x.append(l);
+    //v.append(logo);
+    arr[4].append(x);
+    arr[4].append(c);
+ x.style.float = 'left';    
+arr[4].style.float = 'left';
+l.style.float = 'right';
+//l.style.flexDirection = 'column-reverse';
+
+l.style.listStyle= 'none';
+l.style.height= '30px';
+l.style.paddingRight= "30px"
+arr[4].style.width = '100%';
+    arr[4].style.backgroundColor = 'black';
+    arr[4].style.color = 'white';
+}
+
+
+
+   
+   
+    </script>
+
+
+</body>
+</html>
